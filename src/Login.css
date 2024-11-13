@@ -1,0 +1,116 @@
+/* Center container */
+body {
+  margin: 0;
+  padding: 0;
+  height: 100vh; /* Ensure full height */
+  background-image: 
+    url('https://img.freepik.com/free-photo/multi-colored-psychedelic-background_23-2148805290.jpg?t=st=1731414796~exp=1731418396~hmac=1dc9e2daadcc02cfa6e38abdc2f015349d3a5609f4ad27af46693a8f8d909944&w=740');
+  background-size: cover; /* Ensure the image covers the entire background */
+  background-position: center; /* Center the image */
+  background-repeat: no-repeat; /* Prevent repeating the background image */
+}
+.login-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 3rem;
+  background-color: #f7f0c3;
+  background-image: 
+    url('https://img.freepik.com/free-photo/multi-colored-psychedelic-background_23-2148805290.jpg?t=st=1731414796~exp=1731418396~hmac=1dc9e2daadcc02cfa6e38abdc2f015349d3a5609f4ad27af46693a8f8d909944&w=740'),
+    url('https://img.freepik.com/free-photo/multi-colored-psychedelic-background_23-2148805290.jpg?t=st=1731414796~exp=1731418396~hmac=1dc9e2daadcc02cfa6e38abdc2f015349d3a5609f4ad27af46693a8f8d909944&w=740'); /* Two images for opposite corners */
+  background-size: 30%;  /* Control size of the image */
+  background-position: top left, bottom right;  /* Place one image at top-left, the other at bottom-right */
+  background-repeat: no-repeat;  /* Prevent repeating of the background image */
+  border-radius: 20px;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+  max-width: 420px;
+  margin: auto;
+  transition: all 0.3s ease;
+}
+
+.login-container:hover {
+  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.2);
+}
+
+/* Title */
+.login-container h2 {
+  color: #333;
+  font-size: 1.8rem;
+  margin-bottom: 1.5rem;
+  font-weight: 600;
+  text-align: center;
+}
+
+/* Form */
+.login-form {
+  width: 100%;
+}
+
+.input-group {
+  margin-bottom: 1.2rem;
+}
+
+.input-group label {
+  font-size: 1rem;
+  color: #444;
+  font-weight: 500;
+  display: block;
+  margin-bottom: 0.5rem;
+}
+
+.input-group input {
+  width: 100%;
+  padding: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 12px;
+  background-color: #fff;
+  font-size: 1rem;
+  color: #555;
+  transition: border-color 0.3s ease;
+}
+
+.input-group input:focus {
+  border-color: #e14d2a;
+  outline: none;
+}
+
+/* Submit Button */
+button[type="submit"] {
+  width: 100%;
+  padding: 1rem;
+  background-color: #e14d2a;
+  color: #fff;
+  border: none;
+  border-radius: 12px;
+  font-size: 1.1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+button[type="submit"]:hover {
+  background-color: #d14a1a;
+}
+
+/* Signup link */
+.signup-link {
+  text-align: center;
+  margin-top: 1.5rem;
+}
+
+.signup-link p {
+  font-size: 1rem;
+  color: #444;
+}
+
+.signup-link a {
+  font-size: 1rem;
+  color: #e14d2a;
+  font-weight: 500;
+  text-decoration: none;
+}
+
+.signup-link a:hover {
+  text-decoration: underline;
+}

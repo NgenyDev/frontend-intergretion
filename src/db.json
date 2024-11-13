@@ -1,0 +1,110 @@
+{
+  "users": [
+    {
+      "email": "admin@example.com",
+      "password": "admin123",
+      "role": "admin",
+      "id": "aee6"
+    },
+    {
+      "email": "techwriter@example.com",
+      "password": "techwriter123",
+      "role": "techwriter",
+      "id": "2c8d"
+    },
+    {
+      "email": "user@example.com",
+      "password": "user123",
+      "role": "user",
+      "id": "d434",
+      "imageUrl": "blob:http://localhost:3001/a0c6d8fc-708f-4b8c-aa6d-d70f2d9c9005"
+    },
+    {
+      "id": "67a0",
+      "email": "test@example.com",
+      "password": "123",
+      "role": "user"
+    },
+    {
+      "id": "52b8",
+      "email": "test@example.com",
+      "password": "123",
+      "role": "techwriter"
+    },
+    {
+      "id": "9c22",
+      "email": "test@example.com",
+      "password": "123",
+      "role": "user"
+    },
+    {
+      "id": "b3bc",
+      "email": "leemwangiwaithira@gmail.com",
+      "password": "123",
+      "role": "user",
+      "imageUrl": "blob:http://localhost:3001/2520faa0-41a8-49a6-9171-3d2fb705d97b"
+    },
+    {
+      "id": "b1df",
+      "email": "leemwangiwaithira@gmail.com",
+      "password": "123",
+      "role": "user"
+    },
+    {
+      "id": "0a2d",
+      "email": "leemwangiwaithira@gmail.com",
+      "password": "123",
+      "role": "user"
+    },
+    {
+      "id": "8bda",
+      "email": "leemwangiwaithira@gmail.com",
+      "password": "123",
+      "role": "user"
+    },
+    {
+      "id": "b6cc",
+      "email": "leemwangiwaithira@gmail.com",
+      "password": "123",
+      "role": "user"
+    },
+    {
+      "id": "be42",
+      "email": "leemwangiwaithira@gmail.com",
+      "password": "123",
+      "role": "user"
+    },
+    {
+      "id": "4500",
+      "email": "leemwangiwaithira@gmail.com",
+      "password": "123",
+      "role": "user"
+    },
+    {
+      "id": "6803",
+      "email": "leemwangiwaithira@gmail.com",
+      "password": "123",
+      "role": "user"
+    },
+    {
+      "id": "d411",
+      "email": "leewaithira@gmail.com",
+      "password": "123",
+      "role": "user",
+      "imageUrl": "blob:http://localhost:3001/c2e86e1c-dad9-44bc-857b-55c611a0d0c1"
+    },
+    {
+      "id": "64db",
+      "email": "wewe@gmail.com",
+      "password": "123",
+      "role": "user",
+      "imageUrl": "blob:http://localhost:3001/73fc7a2f-f104-4ef7-8b61-6aa51efebcf5"
+    },
+    {
+      "id": "5110",
+      "email": "wewe@gmail.com",
+      "password": "123",
+      "role": "user"
+    }
+  ]
+}

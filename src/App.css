@@ -1,0 +1,32 @@
+
+/* src/App.css */
+html,
+body,
+#root {
+  height: 100%;
+  margin: 0;
+  background-color: #ffffff;
+  /* Silver-blue background */
+  color: black;
+  /* Bold black text */
+  font-weight: bold;
+  /* Bold text */
+  overflow-y: visible;
+}
+
+.app-container {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+footer {
+  margin-top: auto;
+  /* Push footer to the bottom of the page */
+}
+
+/* Global body styling */
+body {
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+}

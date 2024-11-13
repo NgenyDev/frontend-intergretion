@@ -1,0 +1,53 @@
+
+/* src/ContactUs.css */
+.contact-us {
+    background: linear-gradient(
+        rgba(0, 0, 0, 0.5),  /* Semi-transparent black */
+        rgba(0, 0, 0, 0.5)
+      ),
+      url('https://c4.wallpaperflare.com/wallpaper/632/34/549/technology-monitor-alpha-coders-binary-wallpaper-preview.jpg'); /* Background image */
+    /* Silver-blue background for Contact Us page */
+    text-align: center;
+    padding: 229px;
+}
+.text {
+    background-color: #a1b3c4;
+    width: 600px;
+    margin: 0 auto;  /* This will center the element horizontally */
+    text-align: center;  /* Optional: Centers text inside the element */
+}
+
+.contact-us-form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    max-width: 600px;
+    margin: 0 auto;
+    background-color: #a1b3c4;
+}
+
+.contact-us-form input,
+.contact-us-form textarea {
+    padding: 10px;
+    font-size: 1rem;
+    width: 90%;
+    border: 1px solid #ccc;
+}
+
+.contact-us-form button {
+    padding: 10px 20px;
+    background-color: green;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+.contact-us-form button:hover {
+    background-color: darkgreen;
+}
+
+.success-message {
+    margin-top: 20px;
+    font-size: 1.2rem;
+    color: #ffff;
+}
