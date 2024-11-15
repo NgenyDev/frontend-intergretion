@@ -88,6 +88,7 @@ const Navbaruser = () => {
           <li className="icon" onClick={() => openOverlay("profile")}>
             <FaUser />
           </li>
+          
         </ul>
       </div>
 

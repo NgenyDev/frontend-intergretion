@@ -1,6 +1,7 @@
 /* Center container */
 body {
   background-color: #f7f0c3; /* Base background color */
+  overflow-x: hidden;
 }
 
 .signup-container {
