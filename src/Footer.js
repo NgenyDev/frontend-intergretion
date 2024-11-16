@@ -1,62 +1,84 @@
 import React from 'react';
-import './Footer.css'; // Ensure you have a corresponding CSS file for styling
 import { FaFacebookF, FaTwitter, FaInstagram, FaLinkedin } from 'react-icons/fa';
 import { IoMail, IoPhonePortrait, IoLocation } from 'react-icons/io5';
+import './Footer.css'; // Ensure you have this CSS file for styling
 
-function Footer() {
-    // Function to handle subscribe button click
-    const handleSubscribeClick = (event) => {
-        event.preventDefault(); // Prevent form submission
-        alert('Thank you for subscribing!');
-    };
+const Footer = () => {
+  const handleSubscribeClick = (event) => {
+    event.preventDefault(); // Prevent form submission
+    alert('Thank you for subscribing!'); // Placeholder for actual subscription logic
+  };
 
-    return (
-        <section className="footer">
-            <div className="box-container">
-                <div className="box">
-                    <h3>Moringa School Daily Dev<i className=""></i></h3>
-                    <p>Why Moringa School Daily Dev is the best learning platform?</p>
-                    <div className="share">
-                        <a href="https://www.facebook.com/login" className="fab fa-facebook-f" target="_blank" rel="noopener noreferrer" title="Login with Facebook">
-                            <FaFacebookF />
-                        </a>
-                        <a href="https://twitter.com/login" className="fab fa-twitter" target="_blank" rel="noopener noreferrer" title="Login with Twitter">
-                            <FaTwitter />
-                        </a>
-                        <a href="https://www.instagram.com/accounts/login/" className="fab fa-instagram" id="inst"target="_blank" rel="noopener noreferrer" title="Login with Instagram">
-                            <FaInstagram />
-                        </a>
-                        <a href="https://www.linkedin.com/login" className="fab fa-linkedin" target="_blank" rel="noopener noreferrer" title="Login with LinkedIn">
-                            <FaLinkedin />
-                        </a>
-                    </div>
-                </div>
-                <div className="box">
-                    <h3>Contact Info</h3>
-                    <a href="tel:+254724749550" className="links">
-                        <IoPhonePortrait /> +254-712-345-678
-                    </a>
-                    <a href="mailto:support.moringa@gmail.com?subject=Inquiry%20Regarding%20Products&body=Hello%2C%20I%20would%20like%20more%20information%20about%20your%20products.%20Thank%20you." className="links">
-                        <IoMail /> Email Us
-                    </a>
-                    <a href="https://www.google.com/maps/place/Nairobi,+Kenya" className="links" target="_blank" rel="noopener noreferrer">
-                        <IoLocation /> Nairobi, Kenya
-                    </a>
-                </div>
-                <div className="box">
-                    <h3>Newsletter</h3>
-                    <p>Subscribe for the latest updates</p>
-                    <form onSubmit={handleSubscribeClick}>
-                        <input type="email" name="email" className="email" placeholder="Your email" />
-                        <input type="submit" value="Subscribe" className="btn" />
-                    </form>
-                </div>
-            </div>
-            <div className="credit">
-                Created by <span>Moringa School Daily Dev</span> | All rights reserved
-            </div>
-        </section>
-    );
-}
+  return (
+    <footer className="footer">
+      <div className="footer-container">
+        {/* About Us Section */}
+        <div className="footer-section">
+          <h3>About Us</h3>
+          <p>Empowering students with the latest tech skills through innovative learning. Moringa School is dedicated to transforming the tech space with highly skilled professionals.</p>
+          <div className="social-icons">
+            <a href="https://www.facebook.com/moringaschool" target="_blank" rel="noopener noreferrer" title="Facebook">
+              <FaFacebookF />
+            </a>
+            <a href="https://twitter.com/moringaschool" target="_blank" rel="noopener noreferrer" title="Twitter">
+              <FaTwitter />
+            </a>
+            <a href="https://www.instagram.com/moringaschool" target="_blank" rel="noopener noreferrer" title="Instagram">
+              <FaInstagram />
+            </a>
+            <a href="https://www.linkedin.com/school/moringaschool" target="_blank" rel="noopener noreferrer" title="LinkedIn">
+              <FaLinkedin />
+            </a>
+          </div>
+        </div>
+
+        {/* Courses Section */}
+        <div className="footer-section">
+          <h3>Our Courses</h3>
+          <ul>
+            <li><a href="/courses/software-engineering">Software Engineering</a></li>
+            <li><a href="/courses/web-development">Web Development</a></li>
+            <li><a href="/courses/data-science">Data Science</a></li>
+            <li><a href="/courses/ux-design">UX Design</a></li>
+            <li><a href="/courses/devops">DevOps</a></li>
+          </ul>
+        </div>
+
+        {/* Support Section */}
+        <div className="footer-section">
+          <h3>Support</h3>
+          <ul>
+            <li><a href="/contact">Contact Us</a></li>
+            <li><a href="/faq">FAQ</a></li>
+            <li><a href="/terms">Terms of Service</a></li>
+            <li><a href="/privacy">Privacy Policy</a></li>
+          </ul>
+        </div>
+
+        {/* Contact Info Section */}
+        <div className="footer-section">
+          <h3>Contact Info</h3>
+          <p><IoPhonePortrait /> +254-712-345-678</p>
+          <p><IoMail /> support@moringaschool.com</p>
+          <p><IoLocation /> Nairobi, Kenya</p>
+        </div>
+
+        {/* Newsletter Subscription Section */}
+        <div className="footer-section">
+          <h3>Subscribe to Our Newsletter</h3>
+          <p>Get the latest updates, tech insights, and course announcements directly to your inbox.</p>
+          <form onSubmit={handleSubscribeClick}>
+            <input type="email" name="email" className="email" placeholder="Your email" required />
+            <input type="submit" value="Subscribe" className="btn" />
+          </form>
+        </div>
+      </div>
+
+      <div className="footer-credit">
+        <p>© {new Date().getFullYear()} Moringa School. All rights reserved.</p>
+      </div>
+    </footer>
+  );
+};
 
 export default Footer;

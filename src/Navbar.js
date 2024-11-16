@@ -1,4 +1,3 @@
-// Navbar.js
 import React from "react";
 import { NavLink } from "react-router-dom";
 import "./Navbar.css";
@@ -18,22 +17,34 @@ const Navbar = () => {
           <span className="logo-title">Moringa School Daily Dev</span>
         </li>
         <li>
-          <NavLink to="/" className="navbar-item" activeClassName="active">
+          <NavLink 
+            to="/" 
+            className={({ isActive }) => isActive ? "navbar-item active" : "navbar-item"} 
+          >
             Home
           </NavLink>
         </li>
         <li>
-          <NavLink to="/contact" className="navbar-item" activeClassName="active">
+          <NavLink 
+            to="/contact" 
+            className={({ isActive }) => isActive ? "navbar-item active" : "navbar-item"} 
+          >
             Contact Us
           </NavLink>
         </li>
         <li>
-          <NavLink to="/admin" className="navbar-item" activeClassName="active">
+          <NavLink 
+            to="/AdminDashboard" 
+            className={({ isActive }) => isActive ? "navbar-item active" : "navbar-item"} 
+          >
             Admin
           </NavLink>
         </li>
         <li>
-          <NavLink to="/login" className="navbar-item" activeClassName="active">
+          <NavLink 
+            to="/login" 
+            className={({ isActive }) => isActive ? "navbar-item active" : "navbar-item"} 
+          >
             Login
           </NavLink>
         </li>

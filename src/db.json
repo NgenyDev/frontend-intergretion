@@ -1,22 +1,22 @@
 {
   "users": [
     {
+      "id": "aee6",
       "email": "admin@example.com",
       "password": "admin123",
-      "role": "admin",
-      "id": "aee6"
+      "role": "admin"
     },
     {
+      "id": "2c8d",
       "email": "techwriter@example.com",
       "password": "techwriter123",
-      "role": "techwriter",
-      "id": "2c8d"
+      "role": "techwriter"
     },
     {
+      "id": "d434",
       "email": "user@example.com",
       "password": "user123",
       "role": "user",
-      "id": "d434",
       "imageUrl": "blob:http://localhost:3001/a0c6d8fc-708f-4b8c-aa6d-d70f2d9c9005"
     },
     {
@@ -105,6 +105,244 @@
       "email": "wewe@gmail.com",
       "password": "123",
       "role": "user"
+    },
+    {
+      "id": "936c",
+      "email": "leemwangiwaithira@gmail.com",
+      "password": "123",
+      "role": "user"
+    },
+    {
+      "id": "302d",
+      "email": "leemwangiwaithira@gmail.com",
+      "password": "123",
+      "role": "user"
+    },
+    {
+      "id": "32d9",
+      "email": "techwriter@example.com",
+      "password": "techwriter123",
+      "role": "techwriter"
+    },
+    {
+      "id": "f632",
+      "email": "techwriter@example.com",
+      "password": "123",
+      "role": "techwriter"
+    },
+    {
+      "id": "c992",
+      "email": "admin@example.com",
+      "password": "admin123",
+      "role": "admin"
+    },
+    {
+      "id": "be40",
+      "email": "techwriter@example.com",
+      "password": "1234",
+      "role": "techwriter"
+    },
+    {
+      "id": "cfac",
+      "email": "techwriter@example.com",
+      "password": "123",
+      "role": "techwriter"
+    },
+    {
+      "id": "5da4",
+      "email": "techwriter@example.com",
+      "password": "techwriter123",
+      "role": "techwriter"
+    },
+    {
+      "id": "9406",
+      "email": "techwriter@example.com",
+      "password": "techwriter123",
+      "role": "techwriter"
+    },
+    {
+      "id": "b3d3",
+      "email": "admin@example.com",
+      "password": "admin123",
+      "role": "admin"
+    },
+    {
+      "id": "20f7",
+      "email": "admin@example.com",
+      "password": "admin123",
+      "role": "admin"
+    },
+    {
+      "id": "0d15",
+      "email": "user@example.com",
+      "password": "user123",
+      "role": "user"
+    },
+    {
+      "id": "5cd1",
+      "email": "user@example.com",
+      "password": "user123",
+      "role": "user"
+    },
+    {
+      "id": "3b5a",
+      "email": "user@example.com",
+      "password": "user123",
+      "role": "user"
+    },
+    {
+      "id": "ffc7",
+      "email": "user@example.com",
+      "password": "user123",
+      "role": "user"
+    },
+    {
+      "id": "2ef3",
+      "email": "admin@example.com",
+      "password": "admin123",
+      "role": "admin"
+    },
+    {
+      "id": "9b35",
+      "email": "admin@example.com",
+      "password": "admin123"
+    },
+    {
+      "id": "90d2",
+      "name": "emmanuel kipkirui",
+      "email": "eronoh036@gmail.com",
+      "password": "1234",
+      "role": "admin"
+    },
+    {
+      "id": "d0c8",
+      "email": "eronoh036@gmail.com",
+      "password": "1234"
+    },
+    {
+      "id": "ac96",
+      "email": "admin@example.com",
+      "password": "admin123"
+    },
+    {
+      "id": "bed4",
+      "email": "admin@example.com",
+      "password": "admin123"
+    },
+    {
+      "id": "ff58",
+      "email": "admin@example.com",
+      "password": "admin123"
+    },
+    {
+      "id": "fd61",
+      "email": "admin@example.com",
+      "password": "admin123"
+    },
+    {
+      "id": "1c4c",
+      "email": "admin@example.com",
+      "password": "admin123"
+    },
+    {
+      "id": "06fa",
+      "email": "admin@example.com",
+      "password": "admin123"
+    },
+    {
+      "id": "416c",
+      "email": "admin@example.com",
+      "password": "admin123"
+    },
+    {
+      "id": "bac9",
+      "email": "admin@example.com",
+      "password": "admin123"
+    },
+    {
+      "id": "26b2",
+      "email": "admin@example.com",
+      "password": "admin123"
+    },
+    {
+      "id": "d6fe",
+      "email": "admin@example.com",
+      "password": "admin123"
+    },
+    {
+      "id": "661f",
+      "email": "admin@example.com",
+      "password": "admin123"
+    },
+    {
+      "id": "aef0",
+      "email": "admin@example.com",
+      "password": "admin123"
+    },
+    {
+      "id": "b478",
+      "email": "admin@example.com",
+      "password": "admin123"
+    },
+    {
+      "id": "be6b",
+      "email": "admin@example.com",
+      "password": "admin123"
+    },
+    {
+      "id": "3f42",
+      "email": "admin@example.com",
+      "password": "admin123"
+    },
+    {
+      "id": "71de",
+      "email": "admin@example.com",
+      "password": "admin123"
+    },
+    {
+      "id": "0541",
+      "email": "admin@example.com",
+      "password": "admin123"
+    },
+    {
+      "id": "8e2f",
+      "email": "admin@example.com",
+      "password": "admin123"
+    },
+    {
+      "id": "9903",
+      "email": "admin@example.com",
+      "password": "admin123"
+    },
+    {
+      "id": "6a1e",
+      "email": "admin@example.com",
+      "password": "admin123"
+    },
+    {
+      "id": "a899",
+      "email": "admin@example.com",
+      "password": "admin123"
+    },
+    {
+      "id": "0416",
+      "email": "admin@example.com",
+      "password": "admin123"
+    },
+    {
+      "id": "1bfa",
+      "email": "admin@example.com",
+      "password": "admin123"
+    },
+    {
+      "id": "35c1",
+      "email": "admin@example.com",
+      "password": "admin123"
+    },
+    {
+      "id": "cd60",
+      "email": "admin@example.com",
+      "password": "admin123"
     }
   ]
 }

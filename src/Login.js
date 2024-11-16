@@ -14,17 +14,21 @@ const Login = () => {
     e.preventDefault();
 
     try {
-      // Send a POST request to the backend for login authentication
-      const response = await fetch('http://localhost:5000/auth/login', {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-        },
-        body: JSON.stringify({ email, password }),
-      });
+      // Fetch all users from the db.json
+      const response = await fetch('http://localhost:5000/users');
+      const users = await response.json();
 
-      if (response.ok) {
-        const user = await response.json();
+      // Find the user with matching email and password
+      const user = users.find(u => u.email === email && u.password === password);
+
+      if (user) {
+        console.log(user); // Log user object to check response
+
+        // Check if a user role exists
+        if (!user.role) {
+          setErrorMessage('User role is missing.');
+          return;
+        }
 
         // Store user ID and role in localStorage
         localStorage.setItem('userId', user.id);
@@ -32,15 +36,19 @@ const Login = () => {
 
         // Redirect based on user role
         if (user.role === 'admin') {
-          navigate('http://127.0.0.1:5001/admin/dashboard');
+          console.log('Redirecting to AdminDashboard');
+          navigate('/AdminDashboard');
         } else if (user.role === 'techwriter') {
+          console.log('Redirecting to TechWriterDashboard');
           navigate('/TechWriterDashboard');
-        } else {
+        } else if (user.role === 'user') {
+          console.log('Redirecting to UserDashboard');
           navigate('/UserDashboard');
+        } else {
+          setErrorMessage('Role not recognized.');
         }
       } else {
-        const errorData = await response.json();
-        setErrorMessage(errorData.message || 'Invalid credentials');
+        setErrorMessage('Invalid email or password');
       }
     } catch (error) {
       console.error('Error logging in:', error);
