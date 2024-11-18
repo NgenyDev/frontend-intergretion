@@ -1,0 +1,111 @@
+/* General Sidebar Styling */
+.sidebar {
+    width: 250px; /* Full width when open */
+    height: 100vh;
+    background-color: #181818; /* Dark background color */
+    color: white;
+    position: fixed;
+    top: 70px; /* Offset to avoid overlapping the navbar */
+    left: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding-top: 30px; /* Padding inside the sidebar */
+    box-shadow: 2px 0 10px rgba(0, 0, 0, 0.3); /* Shadow for depth */
+    transition: transform 0.3s ease, width 0.3s ease; /* Smooth transition */
+    transform: translateX(-100%); /* Initially hidden offscreen */
+    overflow: hidden; /* Hide content overflow when closed */
+    border-right: 1px solid #333; /* Optional border */
+    border-radius: 8px; /* Rounded corners for a polished look */
+  }
+  
+  /* Sidebar open state */
+  .sidebar.open {
+    transform: translateX(0); /* Slide into view */
+  }
+  
+  /* Sidebar item styling */
+  .sidebar-item {
+    width: 100%;
+    padding: 15px 20px;
+    display: flex;
+    align-items: center;
+    gap: 15px; /* Space between icon and text */
+    cursor: pointer;
+    font-size: 16px;
+    color: #b3b3b3; /* Default text color */
+    border-bottom: 1px solid #333; /* Separator */
+    transition: background-color 0.3s, color 0.3s; /* Smooth hover effects */
+  }
+  
+  /* Hover effect for sidebar items */
+  .sidebar-item:hover {
+    background-color: #333;
+    color: white;
+  }
+  
+  /* Active sidebar item */
+  .sidebar-item.active {
+    background-color: #08cc2c; /* Active item green */
+    color: white;
+  }
+  
+  /* Active icon color */
+  .sidebar-item.active svg {
+    color: white;
+  }
+  
+  /* Sidebar icon styling */
+  .sidebar-item svg {
+    flex-shrink: 0; /* Prevent shrinking */
+    color: inherit; /* Match the text color */
+  }
+  
+  /* Hide text when sidebar is closed */
+  .sidebar.closed .sidebar-item span {
+    display: none; /* Hide text */
+  }
+  
+  /* Remove bottom border for the last item */
+  .sidebar-item:last-child {
+    border-bottom: none;
+  }
+  
+  /* Branding: Home item styling */
+  .sidebar-item:first-child {
+    font-weight: bold;
+    font-size: 18px;
+    color: #ff0000; /* Red branding */
+  }
+  
+  /* Home icon color */
+  .sidebar-item:first-child svg {
+    color: #ff0000;
+  }
+  
+  /* Hamburger icon styling */
+  .hamburger-icon {
+    position: absolute;
+    top: 20px; /* Adjust position */
+    left: 20px;
+    z-index: 100; /* Ensure visibility */
+    cursor: pointer;
+    color: #ff0000; /* Red color for hamburger */
+    display: block;
+  }
+  
+  /* Sidebar on small screens */
+  @media screen and (max-width: 768px) {
+    .hamburger-icon {
+      display: block; /* Always visible on small screens */
+    }
+  
+    .sidebar {
+      transform: translateX(-100%); /* Hidden off-screen by default */
+    }
+  
+    .sidebar.open {
+      transform: translateX(0); /* Visible when open */
+    }
+  }
+  

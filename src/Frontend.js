@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import './Frontend.css';
 import Navbar from './Navbaruser';
+import Sidebar from './Sidebar-adding'; // Import Sidebar
 import { FaThumbsUp, FaThumbsDown, FaPlus, FaBookmark as FaBookmarkSolid, FaRegBookmark } from 'react-icons/fa';
 
 const CreatePostModal = ({ isOpen, onClose, onSubmit }) => {
@@ -137,20 +138,8 @@ const FrontendComponent = () => {
       ]
     },
     {
-      id: 1,
-      image: '/api/placeholder/600/400',
-      content: 'Frontend development focuses on creating user interfaces and interactions on the web.',
-      likes: 42,
-      dislikes: 8,
-      isBookmarked: false,
-      comments: [
-        { avatar: "/api/placeholder/32/32", username: "john_doe", text: "Great post!" },
-        { avatar: "/api/placeholder/32/32", username: "jane_doe", text: "Really informative." }
-      ]
-    },
-    {
       id: 2,
-      image: '/api/placeholder/600/400',
+      image: 'https://youtu.be/iql930GDmVQ?si=E-MNKTd_mkbl6t2M',
       content: 'Responsive design is key in frontend development to ensure accessibility across devices.',
       likes: 35,
       dislikes: 5,
@@ -209,31 +198,34 @@ const FrontendComponent = () => {
     <>
       <Navbar />
       <div className="frontend-container">
-        <button className="create-post-btn" onClick={() => setIsModalOpen(true)}>
-          <FaPlus /> Create Post
-        </button>
-        <div className="frontend-features">
-          {posts.map((post) => (
-            <FrontendFeature
-              key={post.id}
-              image={post.image}
-              content={post.content}
-              likes={post.likes}
-              dislikes={post.dislikes}
-              isBookmarked={post.isBookmarked}
-              comments={post.comments}
-              onLike={() => handleLike(post.id)}
-              onDislike={() => handleDislike(post.id)}
-              onBookmark={() => handleBookmark(post.id)}
-              onAddComment={(comment) => handleAddComment(post.id, comment)}
-            />
-          ))}
+        <Sidebar /> {/* Add Sidebar here */}
+        <div className="frontend-content">
+          <button className="create-post-btn" onClick={() => setIsModalOpen(true)}>
+            <FaPlus /> Create Post
+          </button>
+          <div className="frontend-features">
+            {posts.map((post) => (
+              <FrontendFeature
+                key={post.id}
+                image={post.image}
+                content={post.content}
+                likes={post.likes}
+                dislikes={post.dislikes}
+                isBookmarked={post.isBookmarked}
+                comments={post.comments}
+                onLike={() => handleLike(post.id)}
+                onDislike={() => handleDislike(post.id)}
+                onBookmark={() => handleBookmark(post.id)}
+                onAddComment={(comment) => handleAddComment(post.id, comment)}
+              />
+            ))}
+          </div>
+          <CreatePostModal
+            isOpen={isModalOpen}
+            onClose={() => setIsModalOpen(false)}
+            onSubmit={handleCreatePost}
+          />
         </div>
-        <CreatePostModal
-          isOpen={isModalOpen}
-          onClose={() => setIsModalOpen(false)}
-          onSubmit={handleCreatePost}
-        />
       </div>
     </>
   );

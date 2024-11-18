@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import './DevOpsComponent.css';
 import Navbaruser from './Navbaruser';
+import Sidebar from './Sidebar-adding'; // Import Sidebar
 import { FaThumbsUp, FaThumbsDown, FaPlus, FaBookmark as FaBookmarkSolid, FaRegBookmark } from 'react-icons/fa';
 
 const CreatePostModal = ({ isOpen, onClose, onSubmit }) => {
@@ -209,31 +210,34 @@ const DevOpsComponent = () => {
     <>
       <Navbaruser />
       <div className="devops-container">
-        <button className="create-post-btn" onClick={() => setIsModalOpen(true)}>
-          <FaPlus /> Create Post
-        </button>
-        <div className="devops-features">
-          {posts.map((post) => (
-            <DevOpsFeature
-              key={post.id}
-              image={post.image}
-              description={post.description}
-              likes={post.likes}
-              dislikes={post.dislikes}
-              isBookmarked={post.isBookmarked}
-              comments={post.comments}
-              onLike={() => handleLike(post.id)}
-              onDislike={() => handleDislike(post.id)}
-              onBookmark={() => handleBookmark(post.id)}
-              onAddComment={(comment) => handleAddComment(post.id, comment)}
-            />
-          ))}
+        <Sidebar /> {/* Include the Sidebar here */}
+        <div className="devops-main-content">
+          <button className="create-post-btn" onClick={() => setIsModalOpen(true)}>
+            <FaPlus /> Create Post
+          </button>
+          <div className="devops-features">
+            {posts.map((post) => (
+              <DevOpsFeature
+                key={post.id}
+                image={post.image}
+                description={post.description}
+                likes={post.likes}
+                dislikes={post.dislikes}
+                isBookmarked={post.isBookmarked}
+                comments={post.comments}
+                onLike={() => handleLike(post.id)}
+                onDislike={() => handleDislike(post.id)}
+                onBookmark={() => handleBookmark(post.id)}
+                onAddComment={(comment) => handleAddComment(post.id, comment)}
+              />
+            ))}
+          </div>
+          <CreatePostModal
+            isOpen={isModalOpen}
+            onClose={() => setIsModalOpen(false)}
+            onSubmit={handleCreatePost}
+          />
         </div>
-        <CreatePostModal
-          isOpen={isModalOpen}
-          onClose={() => setIsModalOpen(false)}
-          onSubmit={handleCreatePost}
-        />
       </div>
     </>
   );

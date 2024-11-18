@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import './CloudComputing.css';
 import Navbaruser from './Navbaruser';
+import Sidebar from './Sidebar-adding'; // Import Sidebar
 import { FaThumbsUp, FaThumbsDown, FaPlus, FaBookmark as FaBookmarkSolid, FaRegBookmark } from 'react-icons/fa';
 
 const CreatePostModal = ({ isOpen, onClose, onSubmit }) => {
@@ -209,29 +210,35 @@ const CloudComputingComponent = () => {
     <>
       <Navbaruser />
       <div className="cloud-container">
-        <div className="cloud-header">
-          <h1>Explore the Power of Cloud Computing</h1>
-          <p>Scale your business and innovate with the flexibility and security of cloud services.</p>
-        </div>
-        <button className="create-post-btn" onClick={() => setIsModalOpen(true)}>
-          <FaPlus /> Create Post
-        </button>
-        <div className="cloud-features">
-          {posts.map((post) => (
-            <CloudFeature
-              key={post.id}
-              image={post.image}
-              description={post.description}
-              likes={post.likes}
-              dislikes={post.dislikes}
-              isBookmarked={post.isBookmarked}
-              comments={post.comments}
-              onLike={() => handleLike(post.id)}
-              onDislike={() => handleDislike(post.id)}
-              onBookmark={() => handleBookmark(post.id)}
-              onAddComment={(comment) => handleAddComment(post.id, comment)}
-            />
-          ))}
+        {/* Sidebar Component */}
+        <Sidebar />
+
+        {/* Main Content Area */}
+        <div className="main-content">
+          <div className="cloud-header">
+            <h1>Explore the Power of Cloud Computing</h1>
+            <p>Scale your business and innovate with the flexibility and security of cloud services.</p>
+          </div>
+          <button className="create-post-btn" onClick={() => setIsModalOpen(true)}>
+            <FaPlus /> Create Post
+          </button>
+          <div className="cloud-features">
+            {posts.map((post) => (
+              <CloudFeature
+                key={post.id}
+                image={post.image}
+                description={post.description}
+                likes={post.likes}
+                dislikes={post.dislikes}
+                isBookmarked={post.isBookmarked}
+                comments={post.comments}
+                onLike={() => handleLike(post.id)}
+                onDislike={() => handleDislike(post.id)}
+                onBookmark={() => handleBookmark(post.id)}
+                onAddComment={(comment) => handleAddComment(post.id, comment)}
+              />
+            ))}
+          </div>
         </div>
         <CreatePostModal
           isOpen={isModalOpen}

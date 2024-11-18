@@ -1,5 +1,67 @@
-.navbar {
+/* .navbar {
     background-color: #fafbf9;
+    padding: 1rem;
+    display: flex;
+    align-items: center;
+}
+
+.navbar-links {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    flex-grow: 1; 
+}
+
+.logo {
+    margin-right: auto;
+}
+.logo {
+    display: flex;
+    align-items: center;
+  }
+  
+  .logo-title {
+    font-size: 1rem;
+    color: #125215;
+    margin-left: 100px; 
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+
+  }
+  
+
+.logo img {
+    height: 50px; 
+    width: auto;
+}
+
+.navbar-item {
+    color: black;
+    text-decoration: none;
+    font-size: 1.2rem;
+    font-weight: bold;
+    padding: 0.5rem 1rem; 
+    margin: 0 10px;
+    min-width: fit-content;
+    white-space: nowrap; 
+    border-radius: 4px;
+    transition: background-color 0.3s ease;
+}
+
+.navbar-item:hover {
+    background-color: #f0f0f0; 
+}
+
+.active {
+    border-bottom: 2px solid green; 
+    color: black;
+    border-radius: 2px;
+} */
+
+.navbar {
+    background-color: #ffffff;
     padding: 1rem;
     display: flex;
     align-items: center;
@@ -26,7 +88,7 @@
   .logo-title {
     font-size: 1rem; /* Adjust size as needed */
     color: #125215; /* Choose a suitable color */
-    margin-left: 100px; /* Spacing between logo and title */
+    margin-left: 200px; /* Spacing between logo and title */
     font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 
   }
