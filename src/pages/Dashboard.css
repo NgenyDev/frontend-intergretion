@@ -1,0 +1,406 @@
+/* Global styles for smooth page fade-in */
+.dashboard-content {
+    padding: 20px;
+    opacity: 0;
+    animation: fadeIn 1.5s ease-in forwards;
+}
+
+/* Fade-in animation for the entire content */
+@keyframes fadeIn {
+    to {
+        opacity: 1;
+    }
+}
+
+/* Header animations */
+.dashboard-header {
+    margin-bottom: 30px;
+    animation: fadeInHeader 1s ease-out forwards;
+}
+
+.dashboard-header h1 {
+    font-size: 2.2rem;
+    font-weight: 600;
+    color: #333;
+    animation: slideUp 0.8s ease-out forwards;
+}
+
+.dashboard-header p {
+    font-size: 1.1rem;
+    color: #555;
+    animation: slideUp 1s ease-out forwards;
+    animation-delay: 0.4s;
+}
+
+/* Animation for header text sliding up */
+@keyframes slideUp {
+    0% {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Animation for header appearance */
+@keyframes fadeInHeader {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+/* Dashboard cards container */
+.dashboard-cards {
+    display: grid;
+    grid-template-columns: 1fr; /* Always 1 column */
+    gap: 20px;
+    animation: fadeIn 1s ease-in forwards;
+    animation-delay: 1.5s;
+}
+
+/* Individual card styling */
+.card {
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    animation: fadeCardIn 1s ease-out forwards;
+}
+
+/* Hover effect for cards */
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 15px rgba(0, 0, 0, 0.15);
+}
+
+/* Animation for card appearance */
+@keyframes fadeCardIn {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+/* Card titles with icons */
+.card h2 {
+    font-size: 1.6rem;
+    font-weight: 500;
+    color: #333;
+    display: flex;
+    align-items: center;
+    margin-bottom: 15px;
+    animation: fadeInTitle 1s ease-out forwards;
+}
+
+/* Animation for card title appearance */
+@keyframes fadeInTitle {
+    0% {
+        opacity: 0;
+        transform: translateY(15px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Card actions buttons container */
+.card-actions {
+    display: flex;
+    gap: 12px;
+    margin-top: 20px;
+    justify-content: space-between;
+}
+
+/* Button styles */
+.card-actions .btn {
+    padding: 12px 18px;
+    font-size: 1rem;
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    transition: transform 0.2s ease, background-color 0.3s ease;
+}
+
+/* Button hover effect */
+.card-actions .btn:hover {
+    transform: scale(1.05);
+}
+
+/* Primary button */
+.card-actions .btn.primary {
+    background-color: #28a745;
+    color: white;
+}
+
+/* Hover effect for primary button */
+.card-actions .btn.primary:hover {
+    background-color: #218838;
+}
+
+/* Danger button */
+.card-actions .btn.danger {
+    background-color: #dc3545;
+    color: white;
+}
+
+/* Hover effect for danger button */
+.card-actions .btn.danger:hover {
+    background-color: #c82333;
+}
+
+/* Warning button */
+.card-actions .btn.warning {
+    background-color: #ffc107;
+    color: white;
+}
+
+/* Hover effect for warning button */
+.card-actions .btn.warning:hover {
+    background-color: #e0a800;
+}
+
+/* Success button */
+.card-actions .btn.success {
+    background-color: #17a2b8;
+    color: white;
+}
+
+/* Hover effect for success button */
+.card-actions .btn.success:hover {
+    background-color: #138496;
+}
+
+/* Secondary button */
+.card-actions .btn.secondary {
+    background-color: #6c757d;
+    color: white;
+}
+
+/* Hover effect for secondary button */
+.card-actions .btn.secondary:hover {
+    background-color: #5a6268;
+}
+
+/* Icon margin for buttons */
+.card-actions .btn i {
+    margin-right: 5px;
+}
+
+/* Media Queries for Responsiveness */
+
+/* For tablets */
+@media (max-width: 768px) {
+    .dashboard-header h1 {
+        font-size: 1.8rem;
+    }
+
+    .dashboard-header p {
+        font-size: 1rem;
+    }
+
+    .dashboard-cards {
+        grid-template-columns: 1fr; /* One column for tablets */
+    }
+
+    .card h2 {
+        font-size: 1.4rem;
+    }
+
+    .card-actions .btn {
+        font-size: 0.9rem;
+        padding: 10px 14px;
+    }
+}
+
+/* For mobile devices */
+@media (max-width: 480px) {
+    .dashboard-header h1 {
+        font-size: 1.6rem;
+    }
+
+    .dashboard-header p {
+        font-size: 0.9rem;
+    }
+
+    .dashboard-cards {
+        grid-template-columns: 1fr; /* One column for mobile */
+    }
+
+    .card h2 {
+        font-size: 1.2rem;
+    }
+
+    .card-actions .btn {
+        font-size: 0.9rem;
+        padding: 8px 12px;
+    }
+}
+
+/* About the App Section */
+.about-app {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    animation: fadeIn 2s ease-out forwards;
+    margin: 50px auto;
+    padding: 0 20px;
+    max-width: 1200px;
+}
+
+/* Card styling */
+.card.about-card {
+    background-color: #fff;
+    border-radius: 12px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+    padding: 40px;
+    max-width: 900px;
+    width: 100%;
+    animation: fadeCardIn 1s ease-out forwards;
+    text-align: center;
+    transform: translateY(30px);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Hover effect for card */
+.card.about-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+}
+
+/* Animation for card appearance */
+@keyframes fadeCardIn {
+    0% {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Section Heading */
+.card.about-card h2 {
+    font-size: 2rem;
+    font-weight: 700;
+    color: #333;
+    margin-bottom: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    animation: slideIn 0.8s ease-out forwards;
+}
+
+/* Slide-in animation for heading */
+@keyframes slideIn {
+    0% {
+        opacity: 0;
+        transform: translateX(-30px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+/* Paragraph styling */
+.card.about-card p {
+    font-size: 1.1rem;
+    color: #555;
+    line-height: 1.6;
+    margin-bottom: 30px;
+}
+
+/* Metrics Section */
+.app-metrics {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+    justify-items: center;
+    margin-top: 20px;
+    padding: 20px 0;
+}
+
+.metric {
+    background-color: #f7f7f7;
+    padding: 30px;
+    border-radius: 12px;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Hover effect for metrics */
+.metric:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+}
+
+/* Metric title */
+.metric h3 {
+    font-size: 2.4rem;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+/* Metric description */
+.metric p {
+    font-size: 1rem;
+    color: #777;
+    margin-bottom: 0;
+}
+
+/* Media Queries for Responsiveness */
+
+/* For tablets */
+@media (max-width: 768px) {
+    .card.about-card h2 {
+        font-size: 1.8rem;
+    }
+
+    .card.about-card p {
+        font-size: 1rem;
+    }
+
+    .app-metrics {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .metric {
+        padding: 25px;
+    }
+}
+
+/* For mobile devices */
+@media (max-width: 480px) {
+    .card.about-card h2 {
+        font-size: 1.6rem;
+    }
+
+    .card.about-card p {
+        font-size: 0.9rem;
+    }
+
+    .app-metrics {
+        grid-template-columns: 1fr;
+    }
+
+    .metric {
+        padding: 20px;
+    }
+}
+

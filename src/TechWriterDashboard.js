@@ -1,161 +1,198 @@
-// import React from 'react';
-// import { Link } from 'react-router-dom';
-// import { Button, Card, CardContent, Typography, Grid, Box } from '@mui/material';
-// import { AccountCircle, PostAdd, Flag, Category } from '@mui/icons-material';
-// import { styled } from '@mui/system';
-// import SidebarTechWriter from './Sidebar-techwriter.js';
-
-// const TechWriterHomePage = () => {
-//   // Styled components for design
-//   const BackgroundBox = styled(Box)({
-//     background: 'linear-gradient(to right, #2196f3, #64b5f6)',
-//     padding: '40px 20px',
-//     borderRadius: '8px',
-//     color: 'white',
-//     boxShadow: '0 4px 8px rgba(0, 0, 0, 0.2)',
-//     textAlign: 'center',
-//   });
-
-//   const VideoBox = styled(Box)({
-//     marginTop: '20px',
-//     marginBottom: '40px',
-//     boxShadow: '0 4px 10px rgba(0, 0, 0, 0.1)',
-//     borderRadius: '8px',
-//     padding: '20px',
-//   });
-
-//   return (
-//     <div style={{ display: 'flex', minHeight: '100vh', backgroundColor: '#f4f7fb' }}>
-//       <SidebarTechWriter />
-
-//       <div style={{ flexGrow: 1, padding: '20px' }}>
-//         {/* Welcome Section */}
-//         <BackgroundBox>
-//           <Typography variant="h3" gutterBottom style={{ fontWeight: '700' }}>
-//             Welcome, Tech Writer!
-//           </Typography>
-//           <Typography variant="body1" style={{ fontSize: '18px', fontWeight: '500' }}>
-//             Explore, create, and contribute to the tech space with Moringa School's community-driven platform.
-//           </Typography>
-//         </BackgroundBox>
-
-//         {/* Profile Section */}
-//         <Card style={{ margin: '20px 0', borderRadius: '8px', boxShadow: '0 4px 8px rgba(0, 0, 0, 0.1)' }}>
-//           <CardContent>
-//             <Typography variant="h6" gutterBottom style={{ color: '#1976d2' }}>
-//               Your Profile
-//             </Typography>
-//             <Link to="/techwriter/profile">
-//               <Button variant="contained" color="primary" startIcon={<AccountCircle />}>
-//                 Edit Profile
-//               </Button>
-//             </Link>
-//           </CardContent>
-//         </Card>
-
-//         {/* Stats Section */}
-//         <Grid container spacing={3} style={{ marginBottom: '20px' }}>
-//           {[
-//             {
-//               title: 'Posts Created',
-//               value: 15, // static data for now
-//               link: '/techwriter/post-content',
-//               icon: <PostAdd />,
-//             },
-//             {
-//               title: 'Approved Content',
-//               value: 10, // static data for now
-//               link: '/techwriter/approve-content',
-//               icon: <PostAdd />,
-//             },
-//             {
-//               title: 'Flagged Content',
-//               value: 3, // static data for now
-//               link: '/techwriter/flagged-content',
-//               icon: <Flag />,
-//             },
-//             {
-//               title: 'Categories',
-//               value: 5, // static data for now
-//               link: '/techwriter/categories',
-//               icon: <Category />,
-//             },
-//           ].map((item, index) => (
-//             <Grid item xs={12} sm={6} md={3} key={index}>
-//               <Card>
-//                 <CardContent>
-//                   <Typography variant="h6">{item.title}</Typography>
-//                   <Typography variant="h5" style={{ fontWeight: 'bold' }}>
-//                     {item.value}
-//                   </Typography>
-//                   <Link to={item.link}>
-//                     <Button variant="contained" color="secondary" fullWidth startIcon={item.icon}>
-//                       {item.title}
-//                     </Button>
-//                   </Link>
-//                 </CardContent>
-//               </Card>
-//             </Grid>
-//           ))}
-//         </Grid>
-
-//         {/* Featured Content Video */}
-//         <VideoBox>
-//           <Typography variant="h6" gutterBottom style={{ fontWeight: '600' }}>
-//             Featured Tech Content
-//           </Typography>
-//           <iframe
-//             width="100%"
-//             height="400"
-//             src="https://www.youtube.com/embed/AtozUZ_GZRw?si=xLmnMGi_mmHnd4oj"
-//             title="YouTube video"
-//             frameBorder="0"
-//             allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
-//             allowFullScreen
-//           ></iframe>
-//         </VideoBox>
-
-//         {/* Latest Post Image */}
-//         <Card style={{ marginBottom: '20px', borderRadius: '8px', boxShadow: '0 4px 8px rgba(0, 0, 0, 0.1)' }}>
-//           <CardContent>
-//             <Typography variant="h6" gutterBottom>
-//               Add Your Latest Post's Image
-//             </Typography>
-//             <img
-//               src="https://via.placeholder.com/1500x800?text=Tech+Content"
-//               alt="Tech Content"
-//               style={{
-//                 width: '100%',
-//                 height: 'auto',
-//                 borderRadius: '8px',
-//                 boxShadow: '0 4px 8px rgba(0, 0, 0, 0.1)',
-//               }}
-//             />
-//           </CardContent>
-//         </Card>
-//       </div>
-//     </div>
-//   );
-// };
-
-// export default TechWriterHomePage;
-
-
 import React from 'react';
-import './TechWriterDashboard.css';
+import './TechWriterDashboard.css'; // Importing CSS for styling
+import { FaUsers, FaUserEdit, FaClipboardList, FaPen, FaRegThumbsUp, FaCommentDots } from 'react-icons/fa';
+import SidebarTechwriter from './Navbar-tech'; // Sidebar component
+import { Link } from 'react-router-dom'; // Importing Link from react-router-dom
 
-const AdminDashboard = () => {
+const TechWriterHomePage = () => {
   return (
-    <div className="admin-dashboard">
-      <h1>Techwriter</h1>
-      <div className="dashboard-content">
-        <p>Welcome to the Admin Dashboard! Here you can manage users, view reports, and more.</p>
-        <button className="btn">Manage Users</button>
-        <button className="btn">View Reports</button>
-        <button className="btn">Settings</button>
+    <div className="techwriter-homepage">
+      {/* Navbar (SidebarTechwriter) */}
+      <SidebarTechwriter />
+
+      {/* Main Content Section */}
+      <div className="main-content">
+        {/* Header Section */}
+        <header className="header">
+          <div className="container">
+            <h1 className="header-title">Moringa School daily.dev</h1>
+            <p className="header-subtitle">
+              A platform for high-quality tech content, curated by the Moringa School community, offering industry insights and expertise.
+            </p>
+            <button className="cta-btn primary-btn">
+              <Link to="/signup">Join the Community</Link>
+            </button>
+          </div>
+        </header>
+
+        {/* Platform Overview Section */}
+        <section className="overview-section">
+          <div className="container">
+            <h2 className="section-title">About Moringa School daily.dev</h2>
+            <p className="section-description">
+              Moringa School daily.dev is your go-to platform for industry-verified tech content, created by our vibrant Moringa School community.
+            </p>
+          </div>
+        </section>
+
+        {/* Video Introduction Section */}
+        <section className="video-introduction">
+          <div className="container">
+            <h2 className="section-title">Platform Overview</h2>
+            <div className="video-container">
+              <iframe
+                width="100%"
+                height="315"
+                src="https://www.youtube.com/embed/AtozUZ_GZRw?si=hXp1mZy2bfub7Zg2&rel=0"
+                title="YouTube video"
+                frameBorder="0"
+                allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+                allowFullScreen
+              ></iframe>
+            </div>
+            <p className="video-description">
+              Watch this video to get an in-depth overview of our platform and learn how it can benefit you.
+            </p>
+          </div>
+        </section>
+
+        {/* Platform Features Section */}
+        <section className="features-section">
+          <div className="container">
+            <h2 className="section-title">Key Features</h2>
+            <div className="features-cards">
+              <div className="feature-card">
+                <FaUsers className="feature-icon" />
+                <h3 className="feature-title">User Authentication</h3>
+                <p className="feature-description">
+                  Multiple user roles including Admins, Tech Writers, and Users with specific permissions.
+                </p>
+              </div>
+              <div className="feature-card">
+                <FaUserEdit className="feature-icon" />
+                <h3 className="feature-title">Content Creation & Editing</h3>
+                <p className="feature-description">
+                  Seamlessly create and manage high-quality content, ensuring up-to-date contributions.
+                </p>
+              </div>
+              <div className="feature-card">
+                <FaClipboardList className="feature-icon" />
+                <h3 className="feature-title">Content Management</h3>
+                <p className="feature-description">
+                  Admins can oversee content approval and categorize for improved access.
+                </p>
+              </div>
+              <div className="feature-card">
+                <FaPen className="feature-icon" />
+                <h3 className="feature-title">Content Categorization</h3>
+                <p className="feature-description">
+                  Flexible category options like DevOps, Fullstack, and Front-End development.
+                </p>
+              </div>
+              <div className="feature-card">
+                <FaRegThumbsUp className="feature-icon" />
+                <h3 className="feature-title">Content Interaction</h3>
+                <p className="feature-description">
+                  Users can like, comment, and engage with content, fostering collaboration.
+                </p>
+              </div>
+              <div className="feature-card">
+                <FaCommentDots className="feature-icon" />
+                <h3 className="feature-title">Discussion & Feedback</h3>
+                <p className="feature-description">
+                  Engage in constructive discussions and share feedback within the community.
+                </p>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* Tech Writer Actions Section */}
+        <section className="techwriter-actions">
+          <div className="container">
+            <h2 className="section-title">Tech Writer Actions</h2>
+            <div className="action-cards">
+              <div className="action-card">
+                <Link to="/createProfile">
+                  <button className="action-btn primary-btn">Create Your Profile</button>
+                </Link>
+                <p className="action-description">Set up your profile to begin sharing your expertise.</p>
+              </div>
+              <div className="action-card">
+                <Link to="/createContent">
+                  <button className="action-btn primary-btn">Create Content</button>
+                </Link>
+                <p className="action-description">Publish insightful articles, videos, or podcasts.</p>
+              </div>
+              <div className="action-card">
+                <Link to="/approveContent">
+                  <button className="action-btn primary-btn">Approve Content</button>
+                </Link>
+                <p className="action-description">Review and approve content for quality assurance.</p>
+              </div>
+              <div className="action-card">
+                <Link to="/ContentModeration">
+                  <button className="action-btn primary-btn">Flag Content</button>
+                </Link>
+                <p className="action-description">Report inappropriate content for review.</p>
+              </div>
+              <div className="action-card">
+                <Link to="/editContent">
+                  <button className="action-btn primary-btn">Edit Your Content</button>
+                </Link>
+                <p className="action-description">Update your content to maintain accuracy and relevance.</p>
+              </div>
+              <div className="action-card">
+                <Link to="/reviewFeedback">
+                  <button className="action-btn primary-btn">Review Feedback</button>
+                </Link>
+                <p className="action-description">Evaluate feedback to enhance future contributions.</p>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* Subscription & Notifications Section */}
+        <section className="subscriptions-section">
+          <div className="container">
+            <h2 className="section-title">Customize Your Interests</h2>
+            <p className="section-description">
+              Subscribe to your favorite content categories and receive personalized notifications on new posts.
+            </p>
+          </div>
+        </section>
+
+        {/* Testimonials Section */}
+        <section className="testimonials-section">
+          <div className="container">
+            <h2 className="section-title">What Our Writers Say</h2>
+            <div className="testimonials-cards">
+              <div className="testimonial-card">
+                <p className="testimonial-text">"Moringa School daily.dev has given me a platform to share my passion for tech with a community of like-minded individuals."</p>
+                <p className="testimonial-author">- Jane Doe, Tech Writer</p>
+              </div>
+              <div className="testimonial-card">
+                <p className="testimonial-text">"The easy-to-use interface and content approval process have made it a pleasure to contribute."</p>
+                <p className="testimonial-author">- John Smith, Senior Developer</p>
+              </div>
+            </div>
+          </div>
+        </section>
       </div>
+
+      {/* Footer Section */}
+      <footer className="footer">
+        <div className="container">
+          <p>&copy; 2024 Moringa School. All rights reserved.</p>
+          <div className="footer-links">
+            <a href="#">Privacy Policy</a>
+            <a href="#">Terms of Service</a>
+            <a href="#">Contact Us</a>
+          </div>
+        </div>
+      </footer>
     </div>
   );
 };
 
-export default AdminDashboard;
+export default TechWriterHomePage;

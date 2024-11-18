@@ -1,41 +1,248 @@
-.techwriter-dashboard {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding: 20px;
-    background-color: #f9ebae;
+/* Global Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Arial', sans-serif;
   }
   
-  h1 {
+  body {
+    background-color: #f4f7fc;
     color: #333;
-    margin-bottom: 20px;
+    line-height: 1.6;
   }
   
-  .dashboard-content {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-  }
-  
-  p {
-    font-size: 18px;
-    color: #666;
-    margin-bottom: 20px;
-  }
-  
-  .btn {
-    margin: 10px;
-    padding: 10px 20px;
-    background-color: #f39c12;
+  /* Header Section */
+  .header {
+    background-color: #0066cc; /* Primary Blue */
     color: white;
+    padding: 80px 0;
+    text-align: center;
+    border-bottom: 5px solid #004080; /* Darker Blue Border */
+  }
+  
+  .header-title {
+    font-size: 36px;
+    font-weight: bold;
+    margin-bottom: 15px;
+  }
+  
+  .header-subtitle {
+    font-size: 20px;
+    margin-bottom: 25px;
+    opacity: 0.8;
+  }
+  
+  .cta-btn {
+    background-color: #28a745; /* Green */
+    color: white;
+    font-size: 18px;
+    padding: 15px 30px;
     border: none;
     border-radius: 5px;
     cursor: pointer;
-    font-size: 16px;
-    transition: background-color 0.3s ease;
+    transition: background-color 0.3s;
   }
   
-  .btn:hover {
-    background-color: #e67e22;
+  .cta-btn:hover {
+    background-color: #218838; /* Darker Green */
+  }
+  
+  /* Main Content Section */
+  .main-content {
+    padding: 50px 0;
+  }
+  
+  .section-title {
+    font-size: 30px;
+    font-weight: bold;
+    margin-bottom: 20px;
+    color: #0056b3; /* Dark Blue */
+  }
+  
+  .section-description {
+    font-size: 18px;
+    margin-bottom: 30px;
+    color: #666;
+  }
+  
+  .container {
+    width: 80%;
+    margin: 0 auto;
+  }
+  
+  /* Video Section */
+  .video-container {
+    margin-bottom: 20px;
+  }
+  
+  .video-description {
+    font-size: 16px;
+    color: #333;
+    opacity: 0.7;
+  }
+  
+  /* Features Section */
+  .features-section {
+    background-color: #ffffff;
+    padding: 40px 0;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  }
+  
+  .features-cards {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 30px;
+  }
+  
+  .feature-card {
+    width: 30%;
+    background-color: #f1f1f1;
+    padding: 25px;
+    border-radius: 10px;
+    text-align: center;
+    transition: transform 0.3s, box-shadow 0.3s;
+  }
+  
+  .feature-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+  }
+  
+  .feature-icon {
+    font-size: 40px;
+    color: #0056b3; /* Dark Blue */
+    margin-bottom: 15px;
+  }
+  
+  .feature-title {
+    font-size: 22px;
+    font-weight: bold;
+    margin-bottom: 15px;
+  }
+  
+  .feature-description {
+    font-size: 16px;
+    color: #555;
+  }
+  
+  /* Tech Writer Actions Section */
+  .techwriter-actions {
+    background-color: #e9f7fd;
+    padding: 50px 0;
+  }
+  
+  .action-cards {
+    display: flex;
+    justify-content: space-between;
+    gap: 30px;
+    flex-wrap: wrap;
+  }
+  
+  .action-card {
+    background-color: #ffffff;
+    padding: 30px;
+    width: 30%;
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s, box-shadow 0.3s;
+  }
+  
+  .action-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+  }
+  
+  .action-btn {
+    background-color: #007bff; /* Blue */
+    color: white;
+    padding: 15px 30px;
+    font-size: 18px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  
+  .action-btn:hover {
+    background-color: #0056b3; /* Darker Blue */
+  }
+  
+  .action-description {
+    font-size: 16px;
+    color: #555;
+    margin-top: 15px;
+  }
+  
+  /* Subscription & Notifications Section */
+  .subscriptions-section {
+    background-color: #ffffff;
+    padding: 50px 0;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  }
+  
+  .subscriptions-section .section-description {
+    font-size: 18px;
+    color: #666;
+  }
+  
+  /* Testimonials Section */
+  .testimonials-section {
+    background-color: #f9f9f9;
+    padding: 50px 0;
+  }
+  
+  .testimonials-cards {
+    display: flex;
+    justify-content: space-between;
+    gap: 30px;
+    flex-wrap: wrap;
+  }
+  
+  .testimonial-card {
+    width: 45%;
+    background-color: #ffffff;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  }
+  
+  .testimonial-text {
+    font-size: 16px;
+    color: #555;
+    margin-bottom: 15px;
+  }
+  
+  .testimonial-author {
+    font-size: 18px;
+    font-weight: bold;
+    color: #0056b3; /* Dark Blue */
+  }
+  
+  /* Footer Section */
+  .footer {
+    background-color: #003366; /* Darker Blue */
+    color: white;
+    padding: 20px 0;
+    text-align: center;
+  }
+  
+  .footer-links {
+    margin-top: 15px;
+  }
+  
+  .footer-links a {
+    color: #ffffff;
+    font-size: 16px;
+    margin: 0 10px;
+    text-decoration: none;
+  }
+  
+  .footer-links a:hover {
+    text-decoration: underline;
   }
   

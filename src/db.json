@@ -1,348 +1,319 @@
 {
+  "contents": [
+    {
+      "id": "fe64",
+      "type": "audio",
+      "title": "IJDSFLDSJFLKDSIJFKS",
+      "user": "ISOFJDSLDFK",
+      "text": "LSIFJDSLF;JSDI",
+      "category": "DevOps"
+    }
+  ],
   "users": [
-    {
-      "id": "aee6",
-      "email": "admin@example.com",
-      "password": "admin123",
-      "role": "admin"
-    },
-    {
-      "id": "2c8d",
-      "email": "techwriter@example.com",
-      "password": "techwriter123",
-      "role": "techwriter"
-    },
-    {
-      "id": "d434",
-      "email": "user@example.com",
-      "password": "user123",
-      "role": "user",
-      "imageUrl": "blob:http://localhost:3001/a0c6d8fc-708f-4b8c-aa6d-d70f2d9c9005"
-    },
-    {
-      "id": "67a0",
-      "email": "test@example.com",
-      "password": "123",
-      "role": "user"
-    },
-    {
-      "id": "52b8",
-      "email": "test@example.com",
-      "password": "123",
-      "role": "techwriter"
-    },
-    {
-      "id": "9c22",
-      "email": "test@example.com",
-      "password": "123",
-      "role": "user"
-    },
-    {
-      "id": "b3bc",
-      "email": "leemwangiwaithira@gmail.com",
-      "password": "123",
-      "role": "user",
-      "imageUrl": "blob:http://localhost:3001/2520faa0-41a8-49a6-9171-3d2fb705d97b"
-    },
-    {
-      "id": "b1df",
-      "email": "leemwangiwaithira@gmail.com",
-      "password": "123",
-      "role": "user"
-    },
-    {
-      "id": "0a2d",
-      "email": "leemwangiwaithira@gmail.com",
-      "password": "123",
-      "role": "user"
-    },
-    {
-      "id": "8bda",
-      "email": "leemwangiwaithira@gmail.com",
-      "password": "123",
-      "role": "user"
-    },
-    {
-      "id": "b6cc",
-      "email": "leemwangiwaithira@gmail.com",
-      "password": "123",
-      "role": "user"
-    },
     {
       "id": "be42",
       "email": "leemwangiwaithira@gmail.com",
       "password": "123",
-      "role": "user"
+      "role": "user",
+      "status": "active"
     },
     {
       "id": "4500",
       "email": "leemwangiwaithira@gmail.com",
       "password": "123",
-      "role": "user"
+      "role": "user",
+      "status": "active"
     },
     {
       "id": "6803",
       "email": "leemwangiwaithira@gmail.com",
       "password": "123",
-      "role": "user"
+      "role": "user",
+      "status": "active"
     },
     {
       "id": "d411",
       "email": "leewaithira@gmail.com",
       "password": "123",
       "role": "user",
-      "imageUrl": "blob:http://localhost:3001/c2e86e1c-dad9-44bc-857b-55c611a0d0c1"
+      "imageUrl": "http://localhost:3001/c2e86e1c-dad9-44bc-857b-55c611a0d0c1",
+      "status": "active"
     },
     {
       "id": "64db",
       "email": "wewe@gmail.com",
       "password": "123",
       "role": "user",
-      "imageUrl": "blob:http://localhost:3001/73fc7a2f-f104-4ef7-8b61-6aa51efebcf5"
+      "imageUrl": "http://localhost:3001/73fc7a2f-f104-4ef7-8b61-6aa51efebcf5",
+      "status": "inactive"
     },
     {
       "id": "5110",
       "email": "wewe@gmail.com",
       "password": "123",
-      "role": "user"
+      "role": "user",
+      "status": "inactive"
     },
     {
       "id": "936c",
       "email": "leemwangiwaithira@gmail.com",
       "password": "123",
-      "role": "user"
-    },
-    {
-      "id": "302d",
-      "email": "leemwangiwaithira@gmail.com",
-      "password": "123",
-      "role": "user"
+      "role": "user",
+      "status": "active"
     },
     {
       "id": "32d9",
       "email": "techwriter@example.com",
       "password": "techwriter123",
-      "role": "techwriter"
+      "role": "techwriter",
+      "status": "active"
     },
     {
       "id": "f632",
       "email": "techwriter@example.com",
       "password": "123",
-      "role": "techwriter"
+      "role": "techwriter",
+      "status": "active"
     },
     {
       "id": "c992",
       "email": "admin@example.com",
       "password": "admin123",
-      "role": "admin"
+      "role": "admin",
+      "status": "active"
     },
     {
       "id": "be40",
       "email": "techwriter@example.com",
       "password": "1234",
-      "role": "techwriter"
+      "role": "techwriter",
+      "status": "active"
     },
     {
       "id": "cfac",
       "email": "techwriter@example.com",
       "password": "123",
-      "role": "techwriter"
+      "role": "techwriter",
+      "status": "active"
     },
     {
       "id": "5da4",
       "email": "techwriter@example.com",
       "password": "techwriter123",
-      "role": "techwriter"
+      "role": "techwriter",
+      "status": "active"
     },
     {
       "id": "9406",
       "email": "techwriter@example.com",
       "password": "techwriter123",
-      "role": "techwriter"
+      "role": "techwriter",
+      "status": "active"
     },
     {
-      "id": "b3d3",
-      "email": "admin@example.com",
-      "password": "admin123",
-      "role": "admin"
+      "id": "28e9",
+      "name": "Emmanuel Kipkirui",
+      "email": "techwriter@example.com",
+      "role": "Admin",
+      "status": "inactive"
     },
     {
-      "id": "20f7",
-      "email": "admin@example.com",
-      "password": "admin123",
-      "role": "admin"
-    },
-    {
-      "id": "0d15",
-      "email": "user@example.com",
-      "password": "user123",
-      "role": "user"
-    },
-    {
-      "id": "5cd1",
-      "email": "user@example.com",
-      "password": "user123",
-      "role": "user"
-    },
-    {
-      "id": "3b5a",
-      "email": "user@example.com",
-      "password": "user123",
-      "role": "user"
-    },
-    {
-      "id": "ffc7",
-      "email": "user@example.com",
-      "password": "user123",
-      "role": "user"
-    },
-    {
-      "id": "2ef3",
-      "email": "admin@example.com",
-      "password": "admin123",
-      "role": "admin"
-    },
-    {
-      "id": "9b35",
-      "email": "admin@example.com",
-      "password": "admin123"
-    },
-    {
-      "id": "90d2",
-      "name": "emmanuel kipkirui",
+      "id": "4c57",
+      "name": "Emmanuel kipkirui",
       "email": "eronoh036@gmail.com",
       "password": "1234",
-      "role": "admin"
+      "role": "user"
     },
     {
-      "id": "d0c8",
-      "email": "eronoh036@gmail.com",
-      "password": "1234"
+      "id": "392b",
+      "name": "",
+      "email": "",
+      "role": "User",
+      "status": "active"
     },
     {
-      "id": "ac96",
-      "email": "admin@example.com",
-      "password": "admin123"
+      "id": "5a25",
+      "name": "Emmanuel kipkirui",
+      "email": "amos@gmail.com",
+      "password": "1234",
+      "role": "user"
+    }
+  ],
+  "posts": [
+    {
+      "id": "1",
+      "user": "John Doe",
+      "text": "This is a great post!",
+      "status": "pending",
+      "categoryId": 1,
+      "comments": [
+        {
+          "user": "Jane Smith",
+          "text": "I agree, great content!",
+          "status": "approved"
+        },
+        {
+          "user": "Mark Black",
+          "text": "Looking forward to more posts!",
+          "status": "pending"
+        }
+      ]
     },
     {
-      "id": "bed4",
-      "email": "admin@example.com",
-      "password": "admin123"
+      "id": "2",
+      "user": "Jane Smith",
+      "text": "This is a bad post! Needs review.",
+      "status": "pending",
+      "categoryId": 2,
+      "comments": []
     },
     {
-      "id": "ff58",
-      "email": "admin@example.com",
-      "password": "admin123"
+      "id": "3",
+      "user": "Alice Johnson",
+      "text": "Nice content, keep it up!",
+      "status": "approved",
+      "categoryId": 3,
+      "comments": [
+        {
+          "user": "John Smith",
+          "text": "Great post, I love the tips!",
+          "status": "approved"
+        }
+      ]
     },
     {
-      "id": "fd61",
-      "email": "admin@example.com",
-      "password": "admin123"
+      "id": "4",
+      "user": "Bob White",
+      "text": "Inappropriate post. Needs to be flagged.",
+      "status": "pending",
+      "categoryId": 4,
+      "comments": []
+    }
+  ],
+  "videos": [
+    {
+      "id": "1",
+      "videoId": "dQw4w9WgXcQ",
+      "title": "Video 1",
+      "description": "Description for Video 1"
     },
     {
-      "id": "1c4c",
-      "email": "admin@example.com",
-      "password": "admin123"
+      "id": "2",
+      "videoId": "xvFZjo5PgG0",
+      "title": "Video 2",
+      "description": "Description for Video 2"
     },
     {
-      "id": "06fa",
-      "email": "admin@example.com",
-      "password": "admin123"
+      "id": "3",
+      "videoId": "J---aiyznGQ",
+      "title": "Video 3",
+      "description": "Description for Video 3"
     },
     {
-      "id": "416c",
-      "email": "admin@example.com",
-      "password": "admin123"
+      "id": "4",
+      "videoId": "3JZ_D3ELwOQ",
+      "title": "Video 4",
+      "description": "Description for Video 4"
     },
     {
-      "id": "bac9",
-      "email": "admin@example.com",
-      "password": "admin123"
+      "id": "5",
+      "videoId": "RgKAFK5djSk",
+      "title": "Video 5",
+      "description": "Description for Video 5"
     },
     {
-      "id": "26b2",
-      "email": "admin@example.com",
-      "password": "admin123"
+      "id": "6",
+      "videoId": "VbfpW0pbvaU",
+      "title": "Video 6",
+      "description": "Description for Video 6"
     },
     {
-      "id": "d6fe",
-      "email": "admin@example.com",
-      "password": "admin123"
+      "id": "7",
+      "videoId": "Uj1ykZWtPYI",
+      "title": "Video 7",
+      "description": "Description for Video 7"
     },
     {
-      "id": "661f",
-      "email": "admin@example.com",
-      "password": "admin123"
+      "id": "8",
+      "videoId": "eYq7WapuDLU",
+      "title": "Video 8",
+      "description": "Description for Video 8"
     },
     {
-      "id": "aef0",
-      "email": "admin@example.com",
-      "password": "admin123"
+      "id": "9",
+      "videoId": "xvZqHgFz51I",
+      "title": "Video 9",
+      "description": "Description for Video 9"
     },
     {
-      "id": "b478",
-      "email": "admin@example.com",
-      "password": "admin123"
+      "id": "10",
+      "videoId": "nDqaTXqCN-Q",
+      "title": "Video 10",
+      "description": "Description for Video 10"
     },
     {
-      "id": "be6b",
-      "email": "admin@example.com",
-      "password": "admin123"
+      "id": "11",
+      "videoId": "PfYnvDL0Qcw",
+      "title": "Video 11",
+      "description": "Description for Video 11"
     },
     {
-      "id": "3f42",
-      "email": "admin@example.com",
-      "password": "admin123"
+      "id": "12",
+      "videoId": "ktvTqknDobU",
+      "title": "Video 12",
+      "description": "Description for Video 12"
+    }
+  ],
+  "audios": [
+    {
+      "id": "7",
+      "user": "Eva Green",
+      "text": "Podcast on Web Development",
+      "status": "pending",
+      "audioUrl": "https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3",
+      "categoryId": 1
     },
     {
-      "id": "71de",
-      "email": "admin@example.com",
-      "password": "admin123"
+      "id": "8",
+      "user": "Frank White",
+      "text": "Audio on JavaScript basics",
+      "status": "approved",
+      "audioUrl": "https://www.soundhelix.com/examples/mp3/SoundHelix-Song-2.mp3",
+      "categoryId": 2
+    }
+  ],
+  "categories": [
+    {
+      "id": "1",
+      "name": "DevOps",
+      "contents": [
+        {
+          "id": "fe64",
+          "type": "audio",
+          "title": "Introduction to DevOps",
+          "user": "Eva Green",
+          "text": "This is an audio clip on DevOps practices",
+          "category": "DevOps"
+        }
+      ]
     },
     {
-      "id": "0541",
-      "email": "admin@example.com",
-      "password": "admin123"
+      "id": "2",
+      "name": "Software Engineering",
+      "contents": [
+        {
+          "id": "f7a9",
+          "type": "video",
+          "title": "Software Engineering Overview",
+          "user": "Frank White",
+          "text": "A brief video about software engineering",
+          "category": "Software Engineering"
+        }
+      ]
     },
     {
-      "id": "8e2f",
-      "email": "admin@example.com",
-      "password": "admin123"
-    },
-    {
-      "id": "9903",
-      "email": "admin@example.com",
-      "password": "admin123"
-    },
-    {
-      "id": "6a1e",
-      "email": "admin@example.com",
-      "password": "admin123"
-    },
-    {
-      "id": "a899",
-      "email": "admin@example.com",
-      "password": "admin123"
-    },
-    {
-      "id": "0416",
-      "email": "admin@example.com",
-      "password": "admin123"
-    },
-    {
-      "id": "1bfa",
-      "email": "admin@example.com",
-      "password": "admin123"
-    },
-    {
-      "id": "35c1",
-      "email": "admin@example.com",
-      "password": "admin123"
-    },
-    {
-      "id": "cd60",
-      "email": "admin@example.com",
-      "password": "admin123"
+      "id": "7015",
+      "name": "Fullstack"
     }
   ]
 }

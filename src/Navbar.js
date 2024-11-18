@@ -34,7 +34,7 @@ const Navbar = () => {
         </li>
         <li>
           <NavLink 
-            to="/AdminDashboard" 
+            to="/admin-dashboard" 
             className={({ isActive }) => isActive ? "navbar-item active" : "navbar-item"} 
           >
             Admin

@@ -33,7 +33,7 @@ const Navbaruser = () => {
         <ul className="navbar-links3">
           <li>
             <NavLink 
-              to="/UserDashboard" 
+              to="/user-dashboard" 
               className={({ isActive }) => isActive ? "navbar-item3 active" : "navbar-item3"}
             >
               FOR YOU
@@ -41,7 +41,7 @@ const Navbaruser = () => {
           </li>
           <li>
             <NavLink 
-              to="/DevOpsComponent" 
+              to="/devops" 
               className={({ isActive }) => isActive ? "navbar-item3 active" : "navbar-item3"}
             >
               DEVOPS
@@ -49,7 +49,7 @@ const Navbaruser = () => {
           </li>
           <li>
             <NavLink 
-              to="/FullStackComponent" 
+              to="/fullstack" 
               className={({ isActive }) => isActive ? "navbar-item3 active" : "navbar-item3"}
             >
               FULLSTACK
@@ -57,7 +57,7 @@ const Navbaruser = () => {
           </li>
           <li>
             <NavLink 
-              to="/FrontendComponent" 
+              to="/frontend" 
               className={({ isActive }) => isActive ? "navbar-item3 active" : "navbar-item3"}
             >
               FRONTEND
@@ -65,7 +65,7 @@ const Navbaruser = () => {
           </li>
           <li>
             <NavLink 
-              to="/BackendComponent" 
+              to="/backend" 
               className={({ isActive }) => isActive ? "navbar-item3 active" : "navbar-item3"}
             >
               BACKEND
@@ -73,7 +73,7 @@ const Navbaruser = () => {
           </li>
           <li>
             <NavLink 
-              to="/CloudComputingComponent" 
+              to="/cloudcomputing" 
               className={({ isActive }) => isActive ? "navbar-item3 active" : "navbar-item3"}
             >
               CLOUD COMPUTING

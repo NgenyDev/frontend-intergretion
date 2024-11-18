@@ -1,0 +1,140 @@
+/* Ensure the navbar container is flexible to fit profile and menu */
+.navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between; /* To space out profile circle and menu */
+    padding: 10px;
+    background-color: #333;
+    color: white;
+}
+
+/* Profile section to contain the circle with initials */
+.navbar-profile {
+    display: flex;
+    align-items: center;
+    margin-right: 20px;
+}
+
+/* Circle to hold the initials */
+.profile-circle {
+    width: 40px;
+    height: 40px;
+    background-color: #4CAF50; /* Green color for the profile circle */
+    border-radius: 50%; /* Make it a circle */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    font-size: 18px;
+    font-weight: bold;
+    margin-right: 10px;
+    cursor: pointer;
+}
+
+.profile-circle:hover {
+    background-color: #45a049; /* Slightly darker green on hover */
+}
+
+/* Navbar links section */
+.navbar-links {
+    flex-grow: 1;
+}
+
+.navbar-links ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.navbar-links ul li {
+    padding: 10px;
+}
+
+.navbar-links ul li a {
+    color: white;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+}
+
+.navbar-links ul li a span {
+    margin-left: 8px;
+}
+
+/* Dropdown Menu */
+.dropdown-menu {
+    position: absolute;
+    top: 60px; /* Adjust according to navbar height */
+    right: 20px;
+    background-color: white;
+    border: 1px solid #ddd;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    width: 200px;
+    z-index: 1000;
+}
+
+.dropdown-menu button {
+    padding: 8px;
+    margin: 5px 0;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    cursor: pointer;
+    font-size: 14px;
+    text-align: left;
+}
+
+.dropdown-menu button:hover {
+    background-color: #45a049;
+}
+
+/* Modal Styling */
+.modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+.modal-content {
+    background-color: white;
+    padding: 20px;
+    border-radius: 5px;
+    width: 400px;
+}
+
+.modal-content form div {
+    margin-bottom: 10px;
+}
+
+.modal-content input {
+    width: 100%;
+    padding: 8px;
+    margin-top: 5px;
+    font-size: 14px;
+}
+
+.modal-content button {
+    padding: 8px 16px;
+    margin: 10px 5px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+.modal-content button:hover {
+    background-color: #45a049;
+}

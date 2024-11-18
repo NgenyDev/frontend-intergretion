@@ -40,10 +40,10 @@ const Login = () => {
           navigate('/AdminDashboard');
         } else if (user.role === 'techwriter') {
           console.log('Redirecting to TechWriterDashboard');
-          navigate('/TechWriterDashboard');
+          navigate('/techwriter-dashboard');
         } else if (user.role === 'user') {
           console.log('Redirecting to UserDashboard');
-          navigate('/UserDashboard');
+          navigate('/user-dashboard');
         } else {
           setErrorMessage('Role not recognized.');
         }
@@ -95,3 +95,4 @@ const Login = () => {
 };
 
 export default Login;
+
