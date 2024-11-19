@@ -1,14 +1,14 @@
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
-import './Signup.css'; // Make sure to check the CSS
+import './Signup.css';
 import Navbar from './Navbar';
 import Footer from './Footer';
 
 const Signup = () => {
-  const [name, setName] = useState(''); // New state for name
+  const [username, setUsername] = useState('');
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
-  const [role, setRole] = useState('user'); // Default role is 'user'
+  const [user_type, setUserType] = useState('user');
   const [error, setError] = useState('');
   const [success, setSuccess] = useState('');
   const navigate = useNavigate();
@@ -17,15 +17,19 @@ const Signup = () => {
     e.preventDefault();
 
     // Validate the fields before submitting
-    if (!name || !email || !password || !role) {
+    if (!username || !email || !password || !user_type) {
       setError('All fields are required');
       return;
     }
 
-    const userData = { name, email, password, role };
+    const userData = { 
+      username, 
+      email, 
+      password, 
+      user_type 
+    };
 
     try {
-      // Updated API endpoint
       const response = await fetch('https://moringadailydev.onrender.com/auth/signup', {
         method: 'POST',
         headers: {
@@ -38,9 +42,8 @@ const Signup = () => {
 
       if (response.ok) {
         setSuccess('User signed up successfully! Redirecting to login...');
-        setTimeout(() => navigate('/login'), 2000); // Redirect after 2 seconds
+        setTimeout(() => navigate('/login'), 2000);
       } else {
-        // Display any errors returned from the server
         setError(result.message || 'Error signing up user');
       }
     } catch (error) {
@@ -58,12 +61,12 @@ const Signup = () => {
         {success && <p className="success-message">{success}</p>}
         <form onSubmit={handleSubmit} className="signup-form">
           <div className="input-group">
-            <label htmlFor="name">Name:</label>
+            <label htmlFor="username">Username:</label>
             <input
               type="text"
               id="username"
-              value={name}
-              onChange={(e) => setName(e.target.value)}
+              value={username}
+              onChange={(e) => setUsername(e.target.value)}
               required
             />
           </div>
@@ -88,15 +91,15 @@ const Signup = () => {
             />
           </div>
           <div className="input-group">
-            <label htmlFor="role">Select Role:</label>
+            <label htmlFor="user_type">Select Role:</label>
             <select
-              id="role"
-              value={role}
-              onChange={(e) => setRole(e.target.value)}
+              id="user_type"
+              value={user_type}
+              onChange={(e) => setUserType(e.target.value)}
               required
             >
-              <option value="techwriter">Tech Writer</option>
               <option value="user">User</option>
+              <option value="techwriter">Tech Writer</option>
             </select>
           </div>
           <button type="submit">Sign Up</button>
