@@ -177,10 +177,13 @@
     transition: background-color 0.3s ease, transform 0.2s ease;
   }
   
-  
+  .fas {
+    color: white;
+  }
   .delete-btn:hover {
     background-color: #c0392b;
     transform: scale(1.05);
+    color: white;
   }
   
   .delete-btn i {

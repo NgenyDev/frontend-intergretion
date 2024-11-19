@@ -219,7 +219,8 @@ const ManageCategories = () => {
                     className="delete-btn"
                     onClick={() => handleDeleteCategory(category.id)}
                   >
-                    <i className="fas fa-trash-alt"></i> {/* FontAwesome trash icon */}
+                    delete
+                    {/* <i className="fas fa-trash-alt"></i>  */}
                   </button>
                 </div>
               </li>

@@ -30,7 +30,7 @@ const Login = ({ onLogin }) => {
 
     try {
       // Fetch users from the JSON server
-      const response = await axios.get('https://moringadailydev.onrender.com/auth/login');
+      const response = await axios.get('http://localhost:5000/users');
       const users = response.data;
 
       // Check if email and password match any user

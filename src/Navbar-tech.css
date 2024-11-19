@@ -1,26 +1,26 @@
-/* Ensure the navbar container is flexible to fit profile and menu */
+
 .navbar {
     display: flex;
     align-items: center;
-    justify-content: space-between; /* To space out profile circle and menu */
+    justify-content: space-between;
     padding: 10px;
-    background-color: #333;
+    background-color: #0c0c0c;
     color: white;
 }
 
-/* Profile section to contain the circle with initials */
+
 .navbar-profile {
     display: flex;
     align-items: center;
     margin-right: 20px;
 }
 
-/* Circle to hold the initials */
+
 .profile-circle {
     width: 40px;
     height: 40px;
-    background-color: #4CAF50; /* Green color for the profile circle */
-    border-radius: 50%; /* Make it a circle */
+    background-color: #4CAF50; 
+    border-radius: 50%; 
     display: flex;
     justify-content: center;
     align-items: center;
@@ -32,10 +32,10 @@
 }
 
 .profile-circle:hover {
-    background-color: #45a049; /* Slightly darker green on hover */
+    background-color: #45a049; 
 }
 
-/* Navbar links section */
+
 .navbar-links {
     flex-grow: 1;
 }
@@ -64,10 +64,10 @@
     margin-left: 8px;
 }
 
-/* Dropdown Menu */
+
 .dropdown-menu {
     position: absolute;
-    top: 60px; /* Adjust according to navbar height */
+    top: 60px; 
     right: 20px;
     background-color: white;
     border: 1px solid #ddd;
@@ -94,7 +94,7 @@
     background-color: #45a049;
 }
 
-/* Modal Styling */
+
 .modal {
     position: fixed;
     top: 0;

@@ -6,7 +6,7 @@ import ContentModeration from './ContentModeration';
 import ManageCategories from './ManageCategories';
 import Settings from './Settings';
 import Dashboard from './pages/Dashboard';
-import Login from './LoginAdmin'; // Import the Login component
+import Login from './LoginAdmin';
 
 const AdminDashboard = () => {
   const [currentPage, setCurrentPage] = useState('dashboard');

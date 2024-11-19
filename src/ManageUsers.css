@@ -14,7 +14,7 @@
     align-items: center; 
     justify-content: center; 
     min-height: 400px;
-    padding-left: 10%;
+    padding-left: 0%;
 }
 
 .sidebar-open .manage-users-container {
@@ -136,6 +136,10 @@
     border-radius: 5px;
     cursor: pointer;
     transition: background-color 0.3s ease;
+}
+.modal {
+    display: flex;
+    flex-direction: column
 }
 
 .add-btn:hover {

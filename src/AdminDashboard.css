@@ -1,13 +1,14 @@
-/* General Styling */
+
 body {
   font-family: Arial, sans-serif;
   margin: 0;
   padding: 0;
-  background-color: #f8f9fa;
+  background-color: #fbfcfc;
   color: #343a40;
+  
 }
 
-/* Sidebar Styling */
+
 .sidebar {
   width: 250px;
   height: 100vh;
@@ -44,11 +45,11 @@ body {
   color: white;
 }
 
-/* Main Content */
+
 .admin-dashboard-container {
   display: flex;
   flex-direction: row;
-  margin-left: 250px; /* Matches sidebar width */
+  margin-left: 250px; 
 }
 
 .admin-dashboard {
@@ -69,7 +70,7 @@ body {
   gap: 20px;
 }
 
-/* Card Styling */
+
 .card {
   background-color: white;
   border: 1px solid #ced4da;
@@ -106,7 +107,7 @@ body {
   transform: scale(1.05);
 }
 
-/* Responsive Design */
+
 @media (max-width: 768px) {
   .sidebar {
     width: 100%;
@@ -131,12 +132,12 @@ body {
   }
 
   .admin-dashboard {
-    margin-top: 220px; /* Ensures content starts below the sidebar */
+    margin-top: 220px; 
     padding: 15px;
   }
 
   .dashboard-content {
-    grid-template-columns: 1fr; /* Single column layout for smaller screens */
+    grid-template-columns: 1fr; 
     gap: 15px;
   }
 }

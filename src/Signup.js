@@ -26,7 +26,7 @@ const Signup = () => {
 
     try {
       // Updated API endpoint
-      const response = await fetch('http://localhost:5000/users', {
+      const response = await fetch('https://moringadailydev.onrender.com/auth/signup', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
@@ -61,7 +61,7 @@ const Signup = () => {
             <label htmlFor="name">Name:</label>
             <input
               type="text"
-              id="name"
+              id="username"
               value={name}
               onChange={(e) => setName(e.target.value)}
               required

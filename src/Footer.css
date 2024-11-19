@@ -1,5 +1,8 @@
 .footer {
-    background-color: #343a40; /* Dark background */
+  background: linear-gradient(
+    rgba(202, 187, 187, 0.5),  
+    rgba(36, 146, 56, 0.5)
+  );
     color: #f8f9fa; /* Light text color */
     padding: 40px 20px;
     font-family: 'Arial', sans-serif;
@@ -27,7 +30,7 @@
   .footer-section h3 {
     font-size: 20px;
     margin-bottom: 15px;
-    color: #007bff; /* Accent color */
+    color: #ffe600; /* Accent color */
     text-transform: uppercase; /* Uppercase for section headers */
   }
   
@@ -52,7 +55,7 @@
   }
   
   .footer-section a:hover {
-    color: #007bff; /* Change link color on hover */
+    color: #1aff00; /* Change link color on hover */
   }
   
   .social-icons {

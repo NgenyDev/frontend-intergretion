@@ -14,7 +14,6 @@ const Navbar = () => {
             width="100"
             height="50"
           />
-          <span className="logo-title">Moringa School Daily Dev</span>
         </li>
         <li>
           <NavLink 

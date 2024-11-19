@@ -49,27 +49,6 @@ const Dashboard = () => {
         </button>
       </div>
 
-      {/* About the App Section */}
-      <section className="about-app">
-        <div className="card about-card">
-          <h2><FontAwesomeIcon icon={faInfoCircle} /> About the App</h2>
-          <p>This platform connects the Moringa School community by allowing tech enthusiasts, writers, and users to share valuable content related to the tech space.</p>
-          <div className="app-metrics">
-            <div className="metric">
-              <h3>500+</h3>
-              <p>Users</p>
-            </div>
-            <div className="metric">
-              <h3>200+</h3>
-              <p>Posts</p>
-            </div>
-            <div className="metric">
-              <h3>10+</h3>
-              <p>Categories</p>
-            </div>
-          </div>
-        </div>
-      </section>
 
       <section className="dashboard-cards">
         {/* User Management Section */}
