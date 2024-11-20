@@ -95,20 +95,12 @@ function UserDashboard() {
         };
         setSelectedPost(enhancedPost);
 
-        // Fetch comments for the post
-        return fetch(`https://moringadailydev.onrender.com/comments?content_id=${postId}`);
-      })
-      .then(response => {
-        if (!response.ok) {
-          throw new Error('Failed to fetch comments');
-        }
-        return response.json();
-      })
-      .then(commentsData => {
-        setComments(commentsData);
+        // Extract comments directly from the content response
+        const contentComments = data.comments || [];
+        setComments(contentComments);
       })
       .catch(error => {
-        console.error('Error fetching post details or comments:', error);
+        console.error('Error fetching post details:', error);
         setError(error.message);
       });
   };
