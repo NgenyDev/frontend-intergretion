@@ -9,7 +9,28 @@ const PLACEHOLDER_IMAGES = [
   'https://images.unsplash.com/photo-1488590528505-98d2b5aba04b',
   'https://images.unsplash.com/photo-1516259762381-22954d7d9261',
   'https://images.unsplash.com/photo-1531297484001-80022131f5a1',
+  'https://images.unsplash.com/photo-1498050108023-c5249f4df085',
+  'https://images.unsplash.com/photo-1488590528505-98d2b5aba04b',
+  'https://images.unsplash.com/photo-1531297484001-80022131f5a1',
+  'https://images.unsplash.com/photo-1587620962725-abab7fe55159',
+  'https://images.unsplash.com/photo-1504384308090-c894fdcc538d',
+  'https://images.unsplash.com/photo-1461749280684-dccba630e2f6',
+  'https://images.unsplash.com/photo-1550745165-9bc0b252726f',
+  'https://images.unsplash.com/photo-1519389950473-47ba0277781c',
+  'https://images.unsplash.com/photo-1542744173-8e7e53415bb0',
+  'https://images.unsplash.com/photo-1605810230434-7631ac76ec81',
+  'https://images.unsplash.com/photo-1614624532983-4ce03382db63',
+  'https://images.unsplash.com/photo-1592424000075-7cf7d4b8c5e0',
+  'https://images.unsplash.com/photo-1516245962894-5a7f7f10f9f9',
+  'https://images.unsplash.com/photo-1571171637578-41bc13add1f3',
+  'https://images.unsplash.com/photo-1488229297570-58520851e675',
+  'https://images.unsplash.com/photo-1526374965328-7f61d4b3a4d1',
+  'https://images.unsplash.com/photo-1510915361894-db6b0da5a226',
+  'https://images.unsplash.com/photo-1517694712202-14dd9538c5f4',
+  'https://images.unsplash.com/photo-1550751827-4bd374c3f58b',
+  'https://images.unsplash.com/photo-1581291518857-4e27b48ff24e',
   'https://images.unsplash.com/photo-1522252234503-e356532cafd5'
+  
 ];
 
 function UserDashboard() {
