@@ -86,33 +86,14 @@ function UserDashboard() {
           image: validateImageUrl(data.image) ? data.image : getPlaceholderImage()
         };
         setSelectedPost(enhancedPost);
-        fetchComments(postId);
+
+        // Extract comments directly from the content response
+        const contentComments = data.comments || [];
+        setComments(contentComments);
       })
       .catch(error => {
         console.error('Error fetching post details:', error);
         setError(error.message);
-      });
-  };
-
-  // Fetch comments for a specific post
-  const fetchComments = (postId) => {
-    if (!postId) {
-      console.error('Invalid post ID for fetching comments');
-      return;
-    }
-
-    fetch(`https://moringadailydev.onrender.com/contents/${postId}/comments`)
-      .then(response => {
-        if (!response.ok) {
-          throw new Error('Network response was not ok');
-        }
-        return response.json();
-      })
-      .then(data => {
-        setComments(data);
-      })
-      .catch(error => {
-        console.error('Error fetching comments:', error);
       });
   };
 
@@ -144,7 +125,12 @@ function UserDashboard() {
       return response.json();
     })
     .then(newCommentData => {
-      setComments([...comments, newCommentData]);
+      // Refetch the entire content to get updated comments
+      return fetch(`https://moringadailydev.onrender.com/contents/${postId}`);
+    })
+    .then(response => response.json())
+    .then(updatedContent => {
+      setComments(updatedContent.comments || []);
       setNewComment('');
     })
     .catch(error => {
@@ -248,7 +234,8 @@ function UserDashboard() {
 
   // Main render
   return (
-    <> <Navbaruser />
+    <> 
+      <Navbaruser />
       <div className="dashboard-container">
         <Sidebar />
         <div className="User Dashboard">
@@ -259,8 +246,7 @@ function UserDashboard() {
           ) : (
             renderContent()
           )}
-        </div>
-      </div>
+        </div> </div>
     </>
   );
 }
