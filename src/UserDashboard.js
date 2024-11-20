@@ -19,6 +19,13 @@ function UserDashboard() {
   const [newComment, setNewComment] = useState('');
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
+  const [isSubmitting, setIsSubmitting] = useState(false);
+
+  // Function to get user ID from localStorage
+  const getUserId = () => {
+    const userData = JSON.parse(localStorage.getItem('userData'));
+    return userData && userData.user_id ? userData.user_id : null;
+  };
 
   // Function to get a random placeholder image
   const getPlaceholderImage = () => {
@@ -72,6 +79,7 @@ function UserDashboard() {
       return;
     }
 
+    // Fetch post details
     fetch(`https://moringadailydev.onrender.com/contents/${postId}`)
       .then(response => {
         if (!response.ok) {
@@ -87,12 +95,20 @@ function UserDashboard() {
         };
         setSelectedPost(enhancedPost);
 
-        // Extract comments directly from the content response
-        const contentComments = data.comments || [];
-        setComments(contentComments);
+        // Fetch comments for the post
+        return fetch(`https://moringadailydev.onrender.com/comments?content_id=${postId}`);
+      })
+      .then(response => {
+        if (!response.ok) {
+          throw new Error('Failed to fetch comments');
+        }
+        return response.json();
+      })
+      .then(commentsData => {
+        setComments(commentsData);
       })
       .catch(error => {
-        console.error('Error fetching post details:', error);
+        console.error('Error fetching post details or comments:', error);
         setError(error.message);
       });
   };
@@ -100,23 +116,46 @@ function UserDashboard() {
   // Submit a new comment
   const handleCommentSubmit = (e) => {
     e.preventDefault();
-    if (!selectedPost || !newComment.trim()) return;
-
-    const postId = selectedPost._id || selectedPost.id;
-    if (!postId) {
-      console.error('No valid post ID for comment submission');
+    
+    // Validate inputs
+    if (!selectedPost || !newComment.trim()) {
+      alert('Please enter a comment');
       return;
     }
 
-    fetch(`https://moringadailydev.onrender.com/contents/${postId}/comments`, {
+    const postId = selectedPost._id || selectedPost.id;
+    const userId = getUserId();
+
+    // Validate user and post
+    if (!postId) {
+      console.error('No valid post ID for comment submission');
+      alert('Invalid post');
+      return;
+    }
+
+    if (!userId) {
+      alert('Please log in to post a comment');
+      return;
+    }
+
+    // Prepare comment payload
+    const commentPayload = {
+      content_id: postId,
+      user_id: userId,
+      text: newComment,
+      parent_comment_id: null
+    };
+
+    // Set submitting state
+    setIsSubmitting(true);
+
+    // Submit comment
+    fetch('https://moringadailydev.onrender.com/comments', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
       },
-      body: JSON.stringify({ 
-        text: newComment,
-        // Add any additional comment metadata if required
-      })
+      body: JSON.stringify(commentPayload)
     })
     .then(response => {
       if (!response.ok) {
@@ -124,18 +163,17 @@ function UserDashboard() {
       }
       return response.json();
     })
-    .then(newCommentData => {
-      // Refetch the entire content to get updated comments
-      return fetch(`https://moringadailydev.onrender.com/contents/${postId}`);
-    })
-    .then(response => response.json())
-    .then(updatedContent => {
-      setComments(updatedContent.comments || []);
+    .then((newCommentData) => {
+      // Update comments locally
+      setComments(prevComments => [...prevComments, newCommentData]);
       setNewComment('');
     })
     .catch(error => {
       console.error('Error submitting comment:', error);
       alert('Failed to submit comment. Please try again.');
+    })
+    .finally(() => {
+      setIsSubmitting(false);
     });
   };
 
@@ -190,10 +228,15 @@ function UserDashboard() {
                   onChange={(e) => setNewComment(e.target.value)}
                   placeholder="Write a comment..."
                   className="comment-input"
+                  disabled={isSubmitting}
                   required
                 />
-                <button type="submit" className="comment-submit-btn">
-                  Submit
+                <button 
+                  type="submit" 
+                  className="comment-submit-btn"
+                  disabled={isSubmitting}
+                >
+                  {isSubmitting ? 'Submitting...' : 'Submit'}
                 </button>
               </form>
             </div>
@@ -204,32 +247,32 @@ function UserDashboard() {
 
     // Post list view
     return (
-      <div className="post-list">
-        {posts.map((post) => {
-          const postId = post._id || post.id;
-          
-          return (
-            <div 
-              key={postId} 
-              className="post" 
-              onClick={() => fetchPostDetails(postId)}
-            >
-              <img 
-                src={post.image} 
-                alt={post.title} 
-                className="post-image" 
-                onError={(e) => {
-                  e.target.src = getPlaceholderImage();
-                }}
-              />
-              <div className="post-info">
-                <h3 className="post-title">{post.title}</h3>
+        <div className="post-list">
+          {posts.map((post) => {
+            const postId = post._id || post.id;
+            
+            return (
+              <div 
+                key={postId} 
+                className="post" 
+                onClick={() => fetchPostDetails(postId)}
+              >
+                <img 
+                  src={post.image} 
+                  alt={post.title} 
+                  className="post-image" 
+                  onError={(e) => {
+                    e.target.src = getPlaceholderImage();
+                  }}
+                />
+                <div className="post-info">
+                  <h3 className="post-title">{post.title}</h3>
+                </div>
               </div>
-            </div>
-          );
-        })}
-      </div>
-    );
+            );
+          })}
+        </div>
+      );
   };
 
   // Main render
@@ -238,7 +281,7 @@ function UserDashboard() {
       <Navbaruser />
       <div className="dashboard-container">
         <Sidebar />
-        <div className="User Dashboard">
+        <div className="User  Dashboard">
           {loading ? (
             <div>Loading...</div>
           ) : error ? (
@@ -246,7 +289,8 @@ function UserDashboard() {
           ) : (
             renderContent()
           )}
-        </div> </div>
+        </div>
+      </div>
     </>
   );
 }
