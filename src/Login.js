@@ -13,7 +13,7 @@ const Login = () => {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    
+
     try {
       const response = await fetch('https://moringadailydev.onrender.com/auth/login', {
         method: 'POST',
@@ -23,8 +23,8 @@ const Login = () => {
         body: JSON.stringify({ 
           email, 
           password,
-          user_type: userType
-        })
+          user_type: userType,
+        }),
       });
 
       if (!response.ok) {
@@ -33,16 +33,19 @@ const Login = () => {
 
       const userData = await response.json();
 
+      // Store the userData in localStorage
+      localStorage.setItem('userData', JSON.stringify(userData));
+
+      // Map user roles to corresponding routes
       const userRoleMap = {
-        'admin': '/AdminDashboard',
-        'techwriter': '/techwriter-dashboard',
-        'user': '/user-dashboard'
+        admin: '/AdminDashboard',
+        techwriter: '/techwriter-dashboard',
+        user: '/user-dashboard',
       };
 
       const normalizedUserType = userType.toLowerCase().trim();
 
       if (userRoleMap[normalizedUserType]) {
-        localStorage.setItem('userData', JSON.stringify(userData));
         localStorage.setItem('userRole', normalizedUserType);
         navigate(userRoleMap[normalizedUserType]);
       } else {
@@ -50,7 +53,7 @@ const Login = () => {
       }
 
     } catch (error) {
-      console.error('Login Error:', error);
+      console.error('Login failed:', error.message);
       setErrorMessage('Login failed. Please check your credentials.');
     }
   };
