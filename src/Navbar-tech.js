@@ -19,7 +19,7 @@ const getInitials = (name) => {
 
 const Navbar = () => {
     const [isDropdownOpen, setIsDropdownOpen] = useState(false);
-    const [isModalOpen, setIsModalOpen] = useState(false);
+ 
     const [user, setUser] = useState({
         name: userName,
         email: 'emmanuel@example.com', // Placeholder email

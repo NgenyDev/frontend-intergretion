@@ -113,34 +113,6 @@ const ManageCategories = () => {
   };
 
   // Handle saving the edited category
-  const handleSaveEditedCategory = (categoryId) => {
-    if (editedCategoryName.trim() === '') {
-      alert('Category name cannot be empty');
-      return;
-    }
-
-    fetch(`http://localhost:5000/categories/${categoryId}`, {
-      method: 'PUT',
-      headers: {
-        'Content-Type': 'application/json',
-      },
-      body: JSON.stringify({ name: editedCategoryName }), // Sending updated category name
-    })
-      .then((response) => response.json())
-      .then((data) => {
-        setCategories(
-          categories.map((category) =>
-            category.id === categoryId ? { ...category, name: editedCategoryName } : category
-          )
-        );
-        setEditingCategory(null); // Reset editing mode
-        setEditedCategoryName(''); // Clear the edited name
-      })
-      .catch((error) => {
-        console.error('There was an error updating the category!', error);
-        setError('Failed to update category. Please try again later.');
-      });
-  };
 
   return (
     <div className="manage-categories">
@@ -220,7 +192,6 @@ const ManageCategories = () => {
                     onClick={() => handleDeleteCategory(category.id)}
                   >
                     delete
-                    {/* <i className="fas fa-trash-alt"></i>  */}
                   </button>
                 </div>
               </li>

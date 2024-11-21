@@ -3,7 +3,7 @@ import './Dashboard.css';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { 
   faUserPlus, faUserSlash, faFlag, faCheck, faCog, faEye, faBell, faUsers, faEdit, faListAlt,
-  faInfoCircle, faChartLine, faPlayCircle
+  faChartLine, faPlayCircle
 } from '@fortawesome/free-solid-svg-icons';
 import { useNavigate } from 'react-router-dom'; // Import useNavigate from react-router-dom
 

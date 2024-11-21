@@ -67,7 +67,7 @@ function UserDashboard() {
   // Fetch all posts
   useEffect(() => {
     fetchPosts();
-  }, []);
+  }, );
 
   const fetchPosts = () => {
     fetch('https://moringadailydev.onrender.com/contents')

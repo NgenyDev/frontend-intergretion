@@ -10,7 +10,7 @@ const TechWriterHomePage = () => {
       {/* Navbar (SidebarTechwriter) */}
       <SidebarTechwriter />
 
-      {/* Main Content Section */}
+      
       <div className="main-content">
         {/* Header Section */}
         <header className="header">
@@ -185,9 +185,7 @@ const TechWriterHomePage = () => {
         <div className="container">
           <p>&copy; 2024 Moringa School. All rights reserved.</p>
           <div className="footer-links">
-            <a href="#">Privacy Policy</a>
-            <a href="#">Terms of Service</a>
-            <a href="#">Contact Us</a>
+            
           </div>
         </div>
       </footer>

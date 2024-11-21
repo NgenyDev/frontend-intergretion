@@ -33,7 +33,7 @@ const Subscriptions = () => {
     };
 
     fetchSubscriptions();
-  }, []);
+  }, );
 
   const handleUnsubscribe = async (id) => {
     try {

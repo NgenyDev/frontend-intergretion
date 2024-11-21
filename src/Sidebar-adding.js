@@ -1,6 +1,6 @@
 import React, { useState, useEffect, useRef } from 'react';
 import { NavLink } from 'react-router-dom'; // Import NavLink
-import { FaHome, FaUser, FaSearch, FaCog, FaBookmark, FaListAlt, FaBell, FaBars } from 'react-icons/fa';
+import { FaHome, FaUser, FaBookmark, FaListAlt, FaBell, FaBars } from 'react-icons/fa';
 import './Sidebar-adding.css';
 
 function Sidebar() {
