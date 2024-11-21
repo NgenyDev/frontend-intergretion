@@ -50,7 +50,7 @@ function UserDashboard() {
 
   // Function to get a random placeholder image
   const getPlaceholderImage = () => {
-    return PLACEHOLDER_IMAGES[Math.floor(Math.random() * PLACEHOLDER_IMAGES.length)];
+    return PLACEHOLDER_IMAGES[3]; // This will always return the first image
   };
 
   // Function to validate image URL
